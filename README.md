@@ -49,16 +49,6 @@ Para o desenvolvimento deste projeto, os seguintes requisitos devem ser atendido
 - Desenvolva uma API RESTful no backend para gerenciar e processar os dados, garantindo a comunicação eficiente entre o front end e o banco de dados.
 - A camada de Modelo de Negócio (Library) deve encapsular as regras e lógicas do sistema.
 
-## Entrega
-
-A entrega do projeto deve ser feita através de um repositório Git público. Certifique-se de incluir todas as camadas do projeto e fornecer um arquivo README.md com instruções detalhadas de como executar o sistema.
-
-A avaliação do projeto considerará a qualidade do código, aderência aos requisitos e funcionalidade geral.
-
-## Foco do Problema
-
-O objetivo principal deste projeto é desenvolver uma plataforma integrada que facilite o agendamento de consultas médicas, proporcionando uma experiência otimizada para médicos, pacientes e recepcionistas. O sistema também visa garantir a eficiência na gestão de horários e especialidades médicas, contribuindo para uma melhor experiência de cuidados de saúde.
-
 
 ## Como abrir:
 
