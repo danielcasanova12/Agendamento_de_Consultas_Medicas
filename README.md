@@ -59,3 +59,6 @@ A avaliação do projeto considerará a qualidade do código, aderência aos req
 
 O objetivo principal deste projeto é desenvolver uma plataforma integrada que facilite o agendamento de consultas médicas, proporcionando uma experiência otimizada para médicos, pacientes e recepcionistas. O sistema também visa garantir a eficiência na gestão de horários e especialidades médicas, contribuindo para uma melhor experiência de cuidados de saúde.
 
+
+## Como abrir:
+
