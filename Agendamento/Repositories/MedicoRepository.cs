@@ -1,35 +1,34 @@
-/*
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Agendamento.Model;
-
+using Agendamento.Data;
+using Microsoft.EntityFrameworkCore;
 namespace Agendamento.Repositories
 {
     public class MedicoRepository
     {
-         private readonly ApplicationDbContext _context;
+         private readonly AppDbContext _context;
 
-        public MedicoRepository(ApplicationDbContext context)
+        public MedicoRepository(AppDbContext context)
         {
             _context = context;
         }
 
         public IEnumerable<Medico> GetAllMédicos()
         {
-            return _context.Médicos.ToList();
+            return _context.Medicos.ToList();
         }
 
         public Medico GetMédicoById(int id)
         {
-            return _context.Médicos.FirstOrDefault(m => m.Id == id);
+            return _context.Medicos.FirstOrDefault(m => m.IdMedico == id);
         }
 
         public void AddMédico(Medico médico)
         {
-            _context.Médicos.Add(médico);
+            _context.Medicos.Add(médico);
             _context.SaveChanges();
         }
 
@@ -41,14 +40,14 @@ namespace Agendamento.Repositories
 
         public void DeleteMédico(int id)
         {
-            var médico = _context.Médicos.Find(id);
+            var médico = _context.Medicos.Find(id);
             if (médico != null)
             {
-                _context.Médicos.Remove(médico);
+                _context.Medicos.Remove(médico);
                 _context.SaveChanges();
             }
         }
 
     }
+
 }
-*/

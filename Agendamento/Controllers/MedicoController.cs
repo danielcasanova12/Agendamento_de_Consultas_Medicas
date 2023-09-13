@@ -1,7 +1,7 @@
-/*
+
 using Agendamento.Model;
 using Microsoft.AspNetCore.Mvc;
-using PlataformaAgendamentoConsultas.Library.Repositories;
+using Agendamento.Repositories;
 using System.Collections.Generic;
 
 namespace PlataformaAgendamentoConsultas.BackEnd.Controllers
@@ -12,7 +12,7 @@ namespace PlataformaAgendamentoConsultas.BackEnd.Controllers
     {
         private readonly MedicoRepository _médicoRepository;
 
-        public MedicoController(MedicoRepository médicoRepository)
+        public MedicosController(MedicoRepository médicoRepository)
         {
             _médicoRepository = médicoRepository;
         }
@@ -38,4 +38,3 @@ namespace PlataformaAgendamentoConsultas.BackEnd.Controllers
         // Implemente métodos POST, PUT e DELETE conforme necessário para a entidade Médico.
     }
 }
-*/
