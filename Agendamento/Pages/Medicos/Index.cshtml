@@ -1,0 +1,32 @@
+@page
+@using PlataformaAgendamentoConsultas.Pages.Medicos
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Especialidade</th>
+            <th>Registro Profissional</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var medico in Model.Medicos)
+        {
+            <tr>
+                <td>@medico.IdMedico</td>
+                <td>@medico.Nome</td>
+                <td>@medico.Especialidade</td>
+                <td>@medico.NumeroRegistroProfissional</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

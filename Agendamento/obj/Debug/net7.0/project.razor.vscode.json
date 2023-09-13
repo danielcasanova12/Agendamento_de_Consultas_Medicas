@@ -24060,6 +24060,11 @@
       "FilePath": "c:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\Pages\\Medicos\\Index.cshtml",
+      "TargetPath": "Pages\\Medicos\\Index.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }

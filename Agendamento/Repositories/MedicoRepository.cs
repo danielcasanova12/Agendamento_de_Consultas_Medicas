@@ -16,29 +16,29 @@ namespace Agendamento.Repositories
             _context = context;
         }
 
-        public IEnumerable<Medico> GetAllMédicos()
+        public List<Medico> GetAllMedicos()
         {
             return _context.Medicos.ToList();
         }
 
-        public Medico GetMédicoById(int id)
+        public Medico GetMedicoById(int id)
         {
             return _context.Medicos.FirstOrDefault(m => m.IdMedico == id);
         }
 
-        public void AddMédico(Medico médico)
+        public void AddMedico(Medico médico)
         {
             _context.Medicos.Add(médico);
             _context.SaveChanges();
         }
 
-        public void UpdateMédico(Medico médico)
+        public void UpdateMedico(Medico médico)
         {
             _context.Entry(médico).State = EntityState.Modified;
             _context.SaveChanges();
         }
 
-        public void DeleteMédico(int id)
+        public void DeleteMedico(int id)
         {
             var médico = _context.Medicos.Find(id);
             if (médico != null)
