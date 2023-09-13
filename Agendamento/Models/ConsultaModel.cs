@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,6 +8,7 @@ namespace Agendamento.Model
 {
     public class Consulta
     {
+        [Key]
         public int? IdConsulta { get; set; }
         public Medico? Medico { get; set; }
         public Paciente? Paciente { get; set; }
