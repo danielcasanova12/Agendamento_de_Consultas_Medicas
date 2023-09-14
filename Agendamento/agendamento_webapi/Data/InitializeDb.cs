@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace agendamento_webapi.Data
 {
-    public static class InitializeDb
+    public  class InitializeDb
     {
         public static void Initialize(AppDbContext context)
         {

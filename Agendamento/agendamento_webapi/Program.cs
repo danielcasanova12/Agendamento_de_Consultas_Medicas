@@ -1,5 +1,5 @@
 using agendamento_webapi.Data;
-using agendamento_webapi.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,48 +26,10 @@ app.MapControllers();
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<AppDbContext>();
 
-    try
-    {
-        var context = services.GetRequiredService<AppDbContext>();
-        InitializeDb(context);
-    }
-    catch (Exception ex)
-    {
-        // Trate qualquer erro relacionado à inicialização do banco de dados aqui.
-        Console.WriteLine("Erro na inicialização do banco de dados: " + ex.Message);
-    }
+    context.Database.EnsureCreated();
+    InitializeDb.Initialize(context);
 }
 
 app.Run();
-
-// Função para inicializar o banco de dados
-void InitializeDb(AppDbContext context)
-{
-    context.Database.EnsureCreated();
-
-    if (!context.Medicos.Any())
-    {
-        var medicos = new List<Medico>
-        {
-            new Medico
-            {
-                Nome = "Dr. João",
-                Especialidade = "Cardiologia",
-                NumeroRegistroProfissional = "12345",
-                ConsultasAgendadas = new List<Consulta>()
-            },
-            new Medico
-            {
-                Nome = "Dra. Maria",
-                Especialidade = "Dermatologia",
-                NumeroRegistroProfissional = "67890",
-                ConsultasAgendadas = new List<Consulta>()
-            }
-            // Adicione mais médicos conforme necessário
-        };
-
-        context.Medicos.AddRange(medicos);
-        context.SaveChanges();
-    }
-}
