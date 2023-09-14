@@ -1,6 +1,19 @@
-﻿namespace agendamento_webapi.Data
+﻿using agendamento_webapi.Models;
+using agendamento_webapi.Models.Agendamento.Model;
+using Microsoft.EntityFrameworkCore;
+
+namespace agendamento_webapi.Data
 {
-    public class AppDbContext
+    public class AppDbContext : DbContext
     {
+        public DbSet<Consulta>? Consultas { get; set; }
+        public DbSet<Especialidade>? Especialidades { get; set; }
+        public DbSet<Medico>? Medicos { get; set; }
+        public DbSet<PacienteModel>? Pacientes { get; set; }
+        public DbSet<Recepcionista>? Recepcionistas { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("DataSource=Tds.db;Cache=Shared");
+        }
     }
 }

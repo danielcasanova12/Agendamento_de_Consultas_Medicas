@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DG+WsUgCQQy5fyxeCGbyVKDzAHYIjys/fjOLGm5psnY=",
+  "Source": "agendamento_webapi",
+  "BasePath": "_content/agendamento_webapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

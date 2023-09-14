@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\agendamento_webapi.props" />
+</Project>
