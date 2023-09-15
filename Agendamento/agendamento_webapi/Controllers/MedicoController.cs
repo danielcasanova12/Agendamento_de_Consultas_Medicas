@@ -68,6 +68,20 @@ namespace agendamento_webapi.Controllers
 
             return NoContent();
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var medico = await _context.Medicos.FindAsync(id);
+            if (medico == null)
+            {
+                return NotFound(); 
+            }
+
+            _context.Medicos.Remove(medico);
+            await _context.SaveChangesAsync();
+
+            return NoContent(); 
+        }
 
 
 
