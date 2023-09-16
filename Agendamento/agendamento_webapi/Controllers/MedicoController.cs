@@ -22,7 +22,7 @@ namespace agendamento_webapi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var medicos = await _context.Medicos!.ToListAsync();
+            var medicos = await _context.Medicos.ToListAsync();
             return Ok(medicos);
         }
         // Ação POST para adicionar um médico
@@ -34,7 +34,7 @@ namespace agendamento_webapi.Controllers
                 return BadRequest();
             }
 
-            _context.Medicos!.Add(medico);
+            _context.Medicos.Add(medico);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(Get), new { id = medico.IdMedico }, medico);
@@ -56,7 +56,7 @@ namespace agendamento_webapi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!_context.Medicos!.Any(m => m.IdMedico == id))
+                if (!_context.Medicos.Any(m => m.IdMedico == id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace agendamento_webapi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var medico = await _context.Medicos!.FindAsync(id);
+            var medico = await _context.Medicos.FindAsync(id);
             if (medico == null)
             {
                 return NotFound(); 

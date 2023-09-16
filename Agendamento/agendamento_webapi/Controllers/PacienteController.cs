@@ -21,7 +21,7 @@ namespace agendamento_webapi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var pacientes = await _context.Pacientes!.ToListAsync();
+            var pacientes = await _context.Pacientes.ToListAsync();
             return Ok(pacientes);
         }
 
@@ -29,7 +29,7 @@ namespace agendamento_webapi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var paciente = await _context.Pacientes!.FindAsync(id);
+            var paciente = await _context.Pacientes.FindAsync(id);
             if (paciente == null)
             {
                 return NotFound(); // Retorna 404 Not Found se o paciente não for encontrado
@@ -47,7 +47,7 @@ namespace agendamento_webapi.Controllers
                 return BadRequest();
             }
 
-            _context.Pacientes!.Add(paciente);
+            _context.Pacientes.Add(paciente);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(Get), new { id = paciente.IdPaciente }, paciente);
@@ -70,7 +70,7 @@ namespace agendamento_webapi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!_context.Pacientes!.Any(p => p.IdPaciente == id))
+                if (!_context.Pacientes.Any(p => p.IdPaciente == id))
                 {
                     return NotFound();
                 }
@@ -87,7 +87,7 @@ namespace agendamento_webapi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var paciente = await _context.Pacientes!.FindAsync(id);
+            var paciente = await _context.Pacientes.FindAsync(id);
             if (paciente == null)
             {
                 return NotFound();

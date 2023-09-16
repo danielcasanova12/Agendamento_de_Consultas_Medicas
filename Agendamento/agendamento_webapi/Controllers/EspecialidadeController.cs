@@ -21,7 +21,7 @@ namespace agendamento_webapi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var especialidades = await _context.Especialidades!.ToListAsync();
+            var especialidades = await _context.Especialidades.ToListAsync();
             return Ok(especialidades);
         }
 
@@ -29,7 +29,7 @@ namespace agendamento_webapi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var especialidade = await _context.Especialidades!.FindAsync(id);
+            var especialidade = await _context.Especialidades.FindAsync(id);
             if (especialidade == null)
             {
                 return NotFound(); // Retorna 404 Not Found se a especialidade não for encontrada
@@ -47,7 +47,7 @@ namespace agendamento_webapi.Controllers
                 return BadRequest();
             }
 
-            _context.Especialidades!.Add(especialidade);
+            _context.Especialidades.Add(especialidade);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(Get), new { id = especialidade.IdEspecialidade }, especialidade);
@@ -70,7 +70,7 @@ namespace agendamento_webapi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!_context.Especialidades!.Any(e => e.IdEspecialidade == id))
+                if (!_context.Especialidades.Any(e => e.IdEspecialidade == id))
                 {
                     return NotFound();
                 }
@@ -87,7 +87,7 @@ namespace agendamento_webapi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var especialidade = await _context.Especialidades!.FindAsync(id);
+            var especialidade = await _context.Especialidades.FindAsync(id);
             if (especialidade == null)
             {
                 return NotFound();
