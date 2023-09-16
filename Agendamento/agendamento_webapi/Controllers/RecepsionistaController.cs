@@ -21,7 +21,7 @@ namespace agendamento_webapi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var recepcionistas = await _context.Recepcionistas.ToListAsync();
+            var recepcionistas = await _context.Recepcionistas!.ToListAsync();
             return Ok(recepcionistas);
         }
 
@@ -29,7 +29,7 @@ namespace agendamento_webapi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var recepcionista = await _context.Recepcionistas.FindAsync(id);
+            var recepcionista = await _context.Recepcionistas!.FindAsync(id);
             if (recepcionista == null)
             {
                 return NotFound(); // Retorna 404 Not Found se a recepcionista não for encontrada
@@ -47,7 +47,7 @@ namespace agendamento_webapi.Controllers
                 return BadRequest();
             }
 
-            _context.Recepcionistas.Add(recepcionista);
+            _context.Recepcionistas!.Add(recepcionista);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(Get), new { id = recepcionista.IdRecepcionista }, recepcionista);
@@ -70,7 +70,7 @@ namespace agendamento_webapi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!_context.Recepcionistas.Any(r => r.IdRecepcionista == id))
+                if (!_context.Recepcionistas!.Any(r => r.IdRecepcionista == id))
                 {
                     return NotFound();
                 }
@@ -87,7 +87,7 @@ namespace agendamento_webapi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var recepcionista = await _context.Recepcionistas.FindAsync(id);
+            var recepcionista = await _context.Recepcionistas!.FindAsync(id);
             if (recepcionista == null)
             {
                 return NotFound();
