@@ -1,0 +1,24 @@
+﻿@page
+@model Agenda_Web.Pages.Consulta.IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta</title>
+</head>
+<body>
+    <h1>Consulta de Dados</h1>
+
+    <div>
+        <!-- Verifica se há dados na ViewBag e exibe-os na página -->
+        @if (ViewBag.ApiData != null)
+        {
+            <pre>@ViewBag.ApiData</pre>
+        }
+        else
+        {
+            <p>Nenhum dado da API disponível.</p>
+        }
+    </div>
+</body>
+</html>
