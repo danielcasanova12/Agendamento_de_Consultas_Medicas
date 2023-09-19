@@ -13,7 +13,7 @@ namespace agendamento_webapi.Data
             context.Database.EnsureCreated();
 
             // Verifique se já existem médicos no banco de dados.
-            if (!context.Medicos.Any())
+            if (!context.Medicos!.Any())
             {
                 // Popule o banco de dados com alguns médicos iniciais.
                 var medicos = new List<Medico>
@@ -35,7 +35,7 @@ namespace agendamento_webapi.Data
                     // Adicione mais médicos conforme necessário
                 };
 
-                context.Medicos.AddRange(medicos);
+                context.Medicos!.AddRange(medicos);
                 context.SaveChanges();
             }
         }
