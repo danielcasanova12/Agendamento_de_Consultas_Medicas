@@ -1,7 +1,6 @@
-﻿using agendamento_webapi.Models.Agendamento.Model;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace agendamento_webapi.Models
+namespace ClassModels
 {
     public class Consulta
     {

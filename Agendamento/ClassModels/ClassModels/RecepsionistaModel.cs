@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Agenda_Web.Models
+namespace ClassModels
 {
-    public class RecepcionistaModel
+    public class Recepcionista
     {
         [Key]
         public int? IdRecepcionista { get; set; }
@@ -10,6 +10,6 @@ namespace Agenda_Web.Models
         public string? Sobrenome { get; set; }
         public string? NúmeroIdentificação { get; set; }
         public string? NúmeroTelefone { get; set; }
-        public List<ConsultaModel>? AgendamentosGerenciados { get; set; }
+        public List<Consulta>? AgendamentosGerenciados { get; set; }
     }
 }

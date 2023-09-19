@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace agendamento_webapi.Models
+namespace ClassModels
 {
     public class Medico
     {

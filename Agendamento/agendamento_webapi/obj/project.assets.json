@@ -1762,19 +1762,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lilit\\.nuget\\packages\\": {}
+    "C:\\Users\\casanova.sistemas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lilit\\OneDrive\\Documentos\\faculdade\\2023-2\\tds\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\agendamento_webapi.csproj",
+      "projectUniqueName": "C:\\Users\\casanova.sistemas\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\agendamento_webapi.csproj",
       "projectName": "agendamento_webapi",
-      "projectPath": "C:\\Users\\lilit\\OneDrive\\Documentos\\faculdade\\2023-2\\tds\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\agendamento_webapi.csproj",
-      "packagesPath": "C:\\Users\\lilit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lilit\\OneDrive\\Documentos\\faculdade\\2023-2\\tds\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\obj\\",
+      "projectPath": "C:\\Users\\casanova.sistemas\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\agendamento_webapi.csproj",
+      "packagesPath": "C:\\Users\\casanova.sistemas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\casanova.sistemas\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\lilit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\casanova.sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1782,6 +1787,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Unisys\\ClearPath\\ePortal Developer 10.0\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1848,7 +1854,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

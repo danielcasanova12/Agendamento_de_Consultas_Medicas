@@ -1,5 +1,4 @@
-﻿using agendamento_webapi.Models;
-using agendamento_webapi.Models.Agendamento.Model;
+﻿using ClassModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace agendamento_webapi.Data

@@ -1,4 +1,4 @@
-﻿using agendamento_webapi.Models;
+﻿using ClassModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

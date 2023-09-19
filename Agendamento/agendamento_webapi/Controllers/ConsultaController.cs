@@ -1,8 +1,7 @@
 ﻿using agendamento_webapi.Data;
-using agendamento_webapi.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ClassModels;
 
 namespace agendamento_webapi.Controllers
 {
