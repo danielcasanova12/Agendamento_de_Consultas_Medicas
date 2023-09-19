@@ -1,0 +1,27 @@
+﻿@page
+@model Agenda_Web.Pages.Consulta.IndexModel
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Médico</th>
+            <th>Paciente</th>
+            <!-- Adicione cabeçalhos para outros atributos da consulta -->
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var consulta in Model.Consultas)
+        {
+                <tr>
+                    <td>@consulta.Medico.Nome</td>
+                    <td>@consulta.Paciente.Nome</td>
+                    <!-- Adicione células para outros atributos da consulta -->
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@consulta.Id">Editar</a> |
+                        <a asp-page="./Delete" asp-route-id="@consulta.Id">Excluir</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

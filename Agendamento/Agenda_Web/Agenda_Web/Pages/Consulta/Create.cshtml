@@ -1,0 +1,18 @@
+﻿@page
+@model Agenda_Web.Pages.Consulta.IndexModel
+
+<form method="post">
+    <div class="form-group">
+        <label for="MedicoId">Médico:</label>
+        <select class="form-control" id="MedicoId" asp-for="Consulta.MedicoId">
+            <option value="">Selecione um médico</option>
+            @foreach (var medico in Model.Medico)
+            {
+                <option value="@medico.Id">@medico.Nome</option>
+            }
+        </select>
+    </div>
+    <!-- Adicione os campos restantes como paciente, data, hora, tipo de consulta, etc. -->
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

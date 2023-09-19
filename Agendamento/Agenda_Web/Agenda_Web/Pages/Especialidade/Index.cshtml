@@ -1,0 +1,25 @@
+﻿@page
+@model Agenda_Web.Pages.Especialidade.IndexModel
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var especialidadeModel in Model.Especialidades)
+        {
+                <tr>
+                    <td>@especialidadeModel.Nome</td>
+                    <td>@especialidadeModel.Descricao</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@especialidadeModel.Id">Editar</a> |
+                        <a asp-page="./Delete" asp-route-id="@especialidadeModel.Id">Excluir</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

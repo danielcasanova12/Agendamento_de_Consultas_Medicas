@@ -1,0 +1,12 @@
+﻿@page
+@model Agenda_Web.Pages.Recepcionista.CreateModel
+
+<form method="post">
+    <div class="form-group">
+        <label for="Nome">Nome:</label>
+        <input type="text" class="form-control" id="Nome" asp-for="Recepcionista.Nome">
+    </div>
+    <!-- Adicione os campos restantes como sobrenome, número de identificação, número de telefone, etc. -->
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
