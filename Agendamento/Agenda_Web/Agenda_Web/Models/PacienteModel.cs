@@ -13,7 +13,7 @@ namespace Agenda_Web.Models
             public string? Sobrenome { get; set; }
             public string? NúmeroIdentificação { get; set; }
             public string? HistoricoMedico { get; set; }
-            public List<Consulta>? ConsultasAgendadas { get; set; }
+            public List<ConsultaModel>? ConsultasAgendadas { get; set; }
         }
     }
 }
