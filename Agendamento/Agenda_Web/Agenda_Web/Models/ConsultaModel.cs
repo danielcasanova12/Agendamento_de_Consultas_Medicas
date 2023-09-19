@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Agenda_Web.Models
 {
-    public class Consulta
+    public class ConsultaModels
     {
         [Key]
         public int? IdConsulta { get; set; }

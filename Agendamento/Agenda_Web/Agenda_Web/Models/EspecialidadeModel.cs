@@ -2,7 +2,7 @@
 
 namespace Agenda_Web.Models
 {
-    public class Especialidade
+    public class EspecialidadeModels
     {
         [Key]
         public int? IdEspecialidade { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Agenda_Web.Models
 {
-    public class Recepcionista
+    public class RecepcionistaModels
     {
         [Key]
         public int? IdRecepcionista { get; set; }

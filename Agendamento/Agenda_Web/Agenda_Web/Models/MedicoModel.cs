@@ -2,7 +2,7 @@
 
 namespace Agenda_Web.Models
 {
-    public class Medico
+    public class MedicoModels
     {
         [Key]
         public int? IdMedico { get; set; }
