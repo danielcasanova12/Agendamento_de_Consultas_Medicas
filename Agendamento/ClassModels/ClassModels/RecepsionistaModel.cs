@@ -2,7 +2,7 @@
 
 namespace ClassModels
 {
-    public class Recepcionista
+    public class RecepcionistaModel
     {
         [Key]
         public int? IdRecepcionista { get; set; }

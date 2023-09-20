@@ -2,7 +2,7 @@
 
 namespace ClassModels
 {
-    public class Medico
+    public class MedicoModel
     {
         [Key]
         public int? IdMedico { get; set; }

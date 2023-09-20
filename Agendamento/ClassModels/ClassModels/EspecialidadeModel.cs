@@ -2,7 +2,7 @@
 
 namespace ClassModels
 {
-    public class Especialidade
+    public class EspecialidadeModel
     {
         [Key]
         public int? IdEspecialidade { get; set; }
