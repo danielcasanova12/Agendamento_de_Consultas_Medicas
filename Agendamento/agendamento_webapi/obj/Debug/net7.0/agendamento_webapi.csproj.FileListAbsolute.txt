@@ -278,3 +278,5 @@ C:\Users\luana\OneDrive\Documentos\GitHub\Agendamento_de_Consultas_Medicas\Agend
 C:\Users\luana\OneDrive\Documentos\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\agendamento_webapi\obj\Debug\net7.0\agendamento_webapi.pdb
 C:\Users\luana\OneDrive\Documentos\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\agendamento_webapi\obj\Debug\net7.0\agendamento_webapi.genruntimeconfig.cache
 C:\Users\luana\OneDrive\Documentos\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\agendamento_webapi\obj\Debug\net7.0\ref\agendamento_webapi.dll
+C:\Users\lilit\OneDrive\Documentos\faculdade\2023-2\tds\Agendamento_de_Consultas_Medicas\Agendamento\agendamento_webapi\bin\Debug\net7.0\ClassModels.dll
+C:\Users\lilit\OneDrive\Documentos\faculdade\2023-2\tds\Agendamento_de_Consultas_Medicas\Agendamento\agendamento_webapi\bin\Debug\net7.0\ClassModels.pdb
