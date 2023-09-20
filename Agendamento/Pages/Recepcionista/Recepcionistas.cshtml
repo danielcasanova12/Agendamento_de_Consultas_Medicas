@@ -1,0 +1,49 @@
+@page
+@model List<RecepcionistaModel>
+
+<h1>Recepcionistas</h1>
+
+<p>
+    <a asp-page="Criar">Adicionar Novo Recepcionista</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Número de Identificação</th>
+            <th>Número de Telefone</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recepcionista in Model)
+        {
+            <tr>
+                <td>@recepcionista.IdRecepcionista</td>
+                <td>@recepcionista.Nome</td>
+                <td>@recepcionista.Sobrenome</td>
+                <td>@recepcionista.NúmeroIdentificação</td>
+                <td>@recepcionista.NúmeroTelefone</td>
+                <td>
+                    <a asp-page="Editar" asp-route-id="@recepcionista.IdRecepcionista">Editar</a> |
+                    <a asp-page-handler="Excluir" asp-route-id="@recepcionista.IdRecepcionista" class="text-danger"
+                       data-confirm="Tem certeza de que deseja excluir este recepcionista?">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        // Adicionar confirmação de exclusão
+        $(document).ready(function () {
+            $('a[data-confirm]').click(function () {
+                return confirm($(this).data('confirm'));
+            });
+        });
+    </script>
+}

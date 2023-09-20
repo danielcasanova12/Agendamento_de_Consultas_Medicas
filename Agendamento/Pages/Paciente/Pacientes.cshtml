@@ -1,0 +1,47 @@
+@page
+@model List<PacienteModel>
+
+    <h1>Pacientes</h1>
+
+    <p>
+        <a asp-page="Criar">Adicionar Novo Paciente</a>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Número de Identificação</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var paciente in Model)
+        {
+            <tr>
+                <td>@paciente.IdPaciente</td>
+                <td>@paciente.Nome</td>
+                <td>@paciente.Sobrenome</td>
+                <td>@paciente.NúmeroIdentificação</td>
+                <td>
+                    <a asp-page="Editar" asp-route-id="@paciente.IdPaciente">Editar</a> |
+                    <a asp-page-handler="Excluir" asp-route-id="@paciente.IdPaciente" class="text-danger"
+                       data-confirm="Tem certeza de que deseja excluir este paciente?">Excluir</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    @section Scripts {
+        <script>
+        // Adicionar confirmação de exclusão
+        $(document).ready(function () {
+            $('a[data-confirm]').click(function () {
+                return confirm($(this).data('confirm'));
+            });
+        });
+        </script>
+    }

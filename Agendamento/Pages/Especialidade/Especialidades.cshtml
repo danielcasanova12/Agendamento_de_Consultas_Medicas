@@ -1,0 +1,45 @@
+@page
+@model List<EspecialidadeModel>
+
+    <h1>Especialidades</h1>
+
+    <p>
+        <a asp-page="Criar">Criar Nova Especialidade</a>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var especialidade in Model)
+        {
+            <tr>
+                <td>@especialidade.IdEspecialidade</td>
+                <td>@especialidade.Nome</td>
+                <td>@especialidade.Descrição</td>
+                <td>
+                    <a asp-page="Editar" asp-route-id="@especialidade.IdEspecialidade">Editar</a> |
+                    <a asp-page-handler="Excluir" asp-route-id="@especialidade.IdEspecialidade" class="text-danger"
+                       data-confirm="Tem certeza de que deseja excluir esta especialidade?">Excluir</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    @section Scripts {
+        <script>
+        // Adicionar confirmação de exclusão
+        $(document).ready(function () {
+            $('a[data-confirm]').click(function () {
+                return confirm($(this).data('confirm'));
+            });
+        });
+        </script>
+    }

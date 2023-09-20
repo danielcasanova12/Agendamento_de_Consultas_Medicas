@@ -1,0 +1,33 @@
+@page
+@model ConsultaCreateModel
+
+<h1>Agendar Nova Consulta</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="MedicoId">Médico:</label>
+        <select asp-for="MedicoId" class="form-control" required>
+            <option value="">Selecione um médico</option>
+            @foreach (var medico in Model.Medicos)
+            {
+            <option value="@medico.Id">@medico.Nome</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="DataHora">Data e Hora:</label>
+        <input type="datetime-local" asp-for="DataHora" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="Tipo">Tipo de Consulta:</label>
+        <select asp-for="Tipo" class="form-control" required>
+            <option value="Presencial">Presencial</option>
+            <option value="Online">Online</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Observacoes">Observações:</label>
+        <textarea asp-for="Observacoes" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Agendar Consulta</button>
+</form>
