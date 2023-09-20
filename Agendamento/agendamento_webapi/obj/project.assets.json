@@ -1762,26 +1762,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lilit\\.nuget\\packages\\": {}
+    "C:\\Users\\daneil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lilit\\OneDrive\\Documentos\\faculdade\\2023-2\\tds\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\agendamento_webapi.csproj",
+      "projectUniqueName": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\agendamento_webapi.csproj",
       "projectName": "agendamento_webapi",
-      "projectPath": "C:\\Users\\lilit\\OneDrive\\Documentos\\faculdade\\2023-2\\tds\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\agendamento_webapi.csproj",
-      "packagesPath": "C:\\Users\\lilit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lilit\\OneDrive\\Documentos\\faculdade\\2023-2\\tds\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\obj\\",
+      "projectPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\agendamento_webapi.csproj",
+      "packagesPath": "C:\\Users\\daneil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\agendamento_webapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lilit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\daneil\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "F:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1848,7 +1847,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "F:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

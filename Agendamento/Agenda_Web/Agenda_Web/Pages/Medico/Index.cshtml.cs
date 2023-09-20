@@ -19,6 +19,7 @@ namespace Agenda_Web.Pages.Consulta
         {
             // URL da sua API
             var apiUrl = "https://localhost:7018/api/Medico";
+            Console.WriteLine(apiUrl);
 
             try
             {
@@ -28,7 +29,6 @@ namespace Agenda_Web.Pages.Consulta
                 // Verifique se a solicitação foi bem-sucedida (código 200)
                 if (response.IsSuccessStatusCode)
                 {
-                    // Se a resposta for bem-sucedida, você pode processar os dados aqui
                     var content = await response.Content.ReadAsStringAsync();
                     // Faça algo com o conteúdo retornado
                     return Content(content, "application/json");
