@@ -27,7 +27,7 @@ namespace agendamento_webapi.Controllers
         }
         // Ação POST para adicionar um médico
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Medico medico)
+        public async Task<IActionResult> Post([FromBody] MedicoModel medico)
         {
             if (medico == null)
             {
@@ -41,7 +41,7 @@ namespace agendamento_webapi.Controllers
         }
         // Ação PUT para editar um médico
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Medico medico)
+        public async Task<IActionResult> Put(int id, [FromBody] MedicoModel medico)
         {
             if (id != medico.IdMedico)
             {

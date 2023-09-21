@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Xm0rWojlRQEhAfGCj99ZNTSYlrr3bw26gaXOmNKyGL2GDarQEOSEGE+8KAqE0UdWRmRb5YOadMR6Ng3aodi68w==",
+  "dgSpecHash": "+pxgsaOHAbc2r0GwVJ8CnYVi+ac3kx9VCCMapUktJV8injcICJL2dEoY1YJC69e4lmAijGOQWJjizNSX+Q10zQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\daneil\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

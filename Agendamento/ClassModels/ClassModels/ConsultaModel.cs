@@ -6,7 +6,7 @@ namespace ClassModels
     {
         [Key]
         public int? IdConsulta { get; set; }
-        public Medico? Medico { get; set; }
+        public MedicoModel? Medico { get; set; }
         public PacienteModel? Paciente { get; set; }
         public DateTime? DataHora { get; set; }
         public TipoConsulta? Tipo { get; set; }

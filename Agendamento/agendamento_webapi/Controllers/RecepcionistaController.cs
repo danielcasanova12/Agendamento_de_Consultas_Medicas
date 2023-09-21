@@ -40,7 +40,7 @@ namespace agendamento_webapi.Controllers
 
         // Ação POST para adicionar uma nova recepcionista
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Recepcionista recepcionista)
+        public async Task<IActionResult> Post([FromBody] RecepcionistaModel recepcionista)
         {
             if (recepcionista == null)
             {
@@ -55,7 +55,7 @@ namespace agendamento_webapi.Controllers
 
         // Ação PUT para atualizar uma recepcionista por ID
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Recepcionista recepcionista)
+        public async Task<IActionResult> Put(int id, [FromBody] RecepcionistaModel recepcionista)
         {
             if (id != recepcionista.IdRecepcionista)
             {

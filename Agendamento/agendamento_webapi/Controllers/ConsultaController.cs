@@ -39,7 +39,7 @@ namespace agendamento_webapi.Controllers
 
         // Ação POST para agendar uma nova consulta
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Consulta consulta)
+        public async Task<IActionResult> Post([FromBody] ConsultaModel consulta)
         {
             if (consulta == null)
             {
@@ -54,7 +54,7 @@ namespace agendamento_webapi.Controllers
 
         // Ação PUT para atualizar uma consulta por ID
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Consulta consulta)
+        public async Task<IActionResult> Put(int id, [FromBody] ConsultaModel consulta)
         {
             if (id != consulta.IdConsulta)
             {

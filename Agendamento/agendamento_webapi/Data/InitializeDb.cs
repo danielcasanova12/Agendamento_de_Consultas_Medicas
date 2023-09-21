@@ -16,21 +16,21 @@ namespace agendamento_webapi.Data
             if (!context.Medicos!.Any())
             {
                 // Popule o banco de dados com alguns médicos iniciais.
-                var medicos = new List<Medico>
+                var medicos = new List<MedicoModel>
                 {
-                    new Medico
+                    new MedicoModel
                     {
                         Nome = "Dr. João",
                         Especialidade = "Cardiologia",
                         NumeroRegistroProfissional = "12345",
-                        ConsultasAgendadas = new List<Consulta>()
+                        ConsultasAgendadas = new List<ConsultaModel>()
                     },
-                    new Medico
+                    new MedicoModel
                     {
                         Nome = "Dra. Maria",
                         Especialidade = "Dermatologia",
                         NumeroRegistroProfissional = "67890",
-                        ConsultasAgendadas = new List<Consulta>()
+                        ConsultasAgendadas = new List<ConsultaModel>()
                     }
                     // Adicione mais médicos conforme necessário
                 };

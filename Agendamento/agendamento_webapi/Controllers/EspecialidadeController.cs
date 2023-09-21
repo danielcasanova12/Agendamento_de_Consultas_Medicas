@@ -40,7 +40,7 @@ namespace agendamento_webapi.Controllers
 
         // Ação POST para adicionar uma nova especialidade
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Especialidade especialidade)
+        public async Task<IActionResult> Post([FromBody] EspecialidadeModel especialidade)
         {
             if (especialidade == null)
             {
@@ -55,7 +55,7 @@ namespace agendamento_webapi.Controllers
 
         // Ação PUT para atualizar uma especialidade por ID
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Especialidade especialidade)
+        public async Task<IActionResult> Put(int id, [FromBody] EspecialidadeModel especialidade)
         {
             if (id != especialidade.IdEspecialidade)
             {

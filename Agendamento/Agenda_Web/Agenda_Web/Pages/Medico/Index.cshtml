@@ -1,24 +1,52 @@
 ﻿@page
-@model Agenda_Web.Pages.Consulta.IndexModel
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Consulta</title>
-</head>
+@model Agenda_Web.Pages.Medico.IndexModel
+@{
+}
 <body>
-    <h1>Consulta de Dados</h1>
+    <h1>Consulta de Médicos</h1>
 
-    <div>
-        <!-- Verifica se há dados na ViewBag e exibe-os na página -->
-        @if (ViewBag.ApiData != null)
-        {
-            <pre>@ViewBag.ApiData</pre>
-        }
-        else
-        {
-            <p>Nenhum dado da API disponível.</p>
-        }
-    </div>
+    @if (Model.Medicos != null && Model.Medicos.Any())
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Especialidade</th>
+                    <th>Número de Registro Profissional</th>
+                    <th>Consultas Agendadas</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var medico in Model.Medicos)
+                {
+                    <tr>
+                        <td>@medico.Nome</td>
+                        <td>@medico.IdMedico</td>
+                        <td>@medico.Especialidade</td>
+                        <td>@medico.NumeroRegistroProfissional</td>
+                        <td>
+                            @if (medico.ConsultasAgendadas != null && medico.ConsultasAgendadas.Any())
+                            {
+                                <ul>
+                                    @foreach (var consulta in medico.ConsultasAgendadas)
+                                    {
+                                        <li>@consulta</li>
+                                    }
+                                </ul>
+                            }
+                            else
+                            {
+                                <p>Nenhuma consulta agendada</p>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Nenhum dado de médico disponível.</p>
+    }
 </body>
-</html>

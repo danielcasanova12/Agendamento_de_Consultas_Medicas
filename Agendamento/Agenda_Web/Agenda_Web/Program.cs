@@ -3,7 +3,7 @@ using Agenda_Web.ApiUrl;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<ApiUrls>();
-builder.Services.AddSingleton(new ApiUrls("https://localhost:7018")); 
+builder.Services.AddSingleton(new ApiUrls("https://localhost:7018"));
 builder.Services.AddRazorPages();
 builder.Services.AddHttpClient();
 
@@ -19,7 +19,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseRouting();
+app.UseRouting(); // Movido para antes de UseAuthorization
 
 app.UseAuthorization();
 

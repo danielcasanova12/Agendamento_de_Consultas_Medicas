@@ -10,6 +10,6 @@ namespace ClassModels
         public string? Sobrenome { get; set; }
         public string? NúmeroIdentificação { get; set; }
         public string? NúmeroTelefone { get; set; }
-        public List<Consulta>? AgendamentosGerenciados { get; set; }
+        public List<ConsultaModel>? AgendamentosGerenciados { get; set; }
     }
 }
