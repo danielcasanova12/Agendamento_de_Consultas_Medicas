@@ -1,52 +1,68 @@
 ﻿@page
 @model Agenda_Web.Pages.Medico.IndexModel
-@{
-}
-<body>
-    <h1>Consulta de Médicos</h1>
 
-    @if (Model.Medicos != null && Model.Medicos.Any())
-    {
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Especialidade</th>
-                    <th>Número de Registro Profissional</th>
-                    <th>Consultas Agendadas</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var medico in Model.Medicos)
-                {
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta de Médicos</title>
+    <!-- Adicione os links para os arquivos CSS e JavaScript do Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Consulta de Médicos</h1>
+
+        @if (Model.Medicos != null && Model.Medicos.Any())
+        {
+            <table class="table table-bordered table-striped">
+                <thead>
                     <tr>
-                        <td>@medico.Nome</td>
-                        <td>@medico.IdMedico</td>
-                        <td>@medico.Especialidade</td>
-                        <td>@medico.NumeroRegistroProfissional</td>
-                        <td>
-                            @if (medico.ConsultasAgendadas != null && medico.ConsultasAgendadas.Any())
-                            {
-                                <ul>
-                                    @foreach (var consulta in medico.ConsultasAgendadas)
-                                    {
-                                        <li>@consulta</li>
-                                    }
-                                </ul>
-                            }
-                            else
-                            {
-                                <p>Nenhuma consulta agendada</p>
-                            }
-                        </td>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Especialidade</th>
+                        <th>Número de Registro Profissional</th>
+                        <th>Consultas Agendadas</th>
+                        <th>Ações</th> <!-- Coluna para as ações (Editar e Excluir) -->
                     </tr>
-                }
-            </tbody>
-        </table>
-    }
-    else
-    {
-        <p>Nenhum dado de médico disponível.</p>
-    }
+                </thead>
+                <tbody>
+                    @foreach (var medico in Model.Medicos)
+                    {
+                        <tr>
+                            <td>@medico.IdMedico</td>
+                            <td>@medico.Nome</td>
+                            <td>@medico.Especialidade</td>
+                            <td>@medico.NumeroRegistroProfissional</td>
+                            <td>
+                                @if (medico.ConsultasAgendadas != null && medico.ConsultasAgendadas.Any())
+                                {
+                                    <ul class="list-unstyled">
+                                        @foreach (var consulta in medico.ConsultasAgendadas)
+                                        {
+                                            <li>@consulta</li>
+                                        }
+                                    </ul>
+                                }
+                                else
+                                {
+                                    <p>Nenhuma consulta agendada</p>
+                                }
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="/Medico/Editar/@medico.IdMedico">Editar</a>
+                                <a class="btn btn-danger" href="/Medico/Delete/@medico.IdMedico">Excluir</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>Nenhum dado de médico disponível.</p>
+        }
+
+        <a class="btn btn-primary" href="/Medico/Create">Criar médico</a>
+    </div>
 </body>
+</html>

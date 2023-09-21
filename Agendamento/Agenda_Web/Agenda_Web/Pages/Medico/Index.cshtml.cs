@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using System.Net.Http;
 
-
 namespace Agenda_Web.Pages.Medico
 {
     public class IndexModel : PageModel

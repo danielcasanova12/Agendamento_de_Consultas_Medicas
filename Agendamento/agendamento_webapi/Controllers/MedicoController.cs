@@ -25,6 +25,20 @@ namespace agendamento_webapi.Controllers
             var medicos = await _context.Medicos!.ToListAsync();
             return Ok(medicos);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetMedico(int id)
+        {
+            var medico = await _context.Medicos.FirstOrDefaultAsync(m => m.IdMedico == id);
+
+            if (medico == null)
+            {
+                return NotFound(); // Retorna um status 404 (Not Found) se o médico não for encontrado.
+            }
+
+            return Ok(medico); // Retorna o médico encontrado com um status 200 (OK).
+        }
+
         // Ação POST para adicionar um médico
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] MedicoModel medico)

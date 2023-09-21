@@ -1,0 +1,21 @@
+﻿@page "{id:int}"
+@model Agenda_Web.Pages.Medico.EditarModel
+@{
+}
+
+<h1>Editar Médico</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Medico.IdMedico" name="IdMedico" />
+    <div class="form-group">
+        <label for="Nome">Nome:</label>
+        <input type="text" class="form-control" id="Nome" asp-for="Medico.Nome" name="Medico.Nome" required />
+    </div>
+    <div class="form-group">
+        <label for="Especialidade">Especialidade:</label>
+        <input type="text" class="form-control" id="Especialidade" asp-for="Medico.Especialidade" name="Medico.Especialidade" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+<a class="btn btn-secondary" href="/Medico/Index">Voltar</a>
