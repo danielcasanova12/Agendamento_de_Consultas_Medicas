@@ -5,15 +5,16 @@
 
 <h1>Editar Médico</h1>
 
-<form method="post">
-    <input type="hidden" asp-for="Medico.IdMedico" name="IdMedico" />
+<form method="post" asp-page-handler="put">
+    <input type="hidden" name="_method" value="PUT" />
+    <input type="hidden" asp-for="Medico.IdMedico" name="id" /> <!-- Use "id" como nome do parâmetro para o ID do médico na URL -->
     <div class="form-group">
         <label for="Nome">Nome:</label>
-        <input type="text" class="form-control" id="Nome" asp-for="Medico.Nome" name="Medico.Nome" required />
+        <input type="text" class="form-control" id="Nome" asp-for="Medico.Nome" name="nome" required /> <!-- Use "nome" como nome do parâmetro para o nome do médico -->
     </div>
     <div class="form-group">
         <label for="Especialidade">Especialidade:</label>
-        <input type="text" class="form-control" id="Especialidade" asp-for="Medico.Especialidade" name="Medico.Especialidade" required />
+        <input type="text" class="form-control" id="Especialidade" asp-for="Medico.Especialidade" name="especialidade" required /> <!-- Use "especialidade" como nome do parâmetro para a especialidade do médico -->
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
