@@ -109,3 +109,4 @@ C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\Ag
 C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\Agenda_Web\Agenda_Web\obj\Debug\net6.0\Agenda_Web.genruntimeconfig.cache
 C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\Agenda_Web\Agenda_Web\obj\Debug\net6.0\ref\Agenda_Web.dll
 C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\Agenda_Web\Agenda_Web\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\lilit\OneDrive\Documentos\faculdade\2023-2\tds\Agendamento_de_Consultas_Medicas\Agendamento\Agenda_Web\Agenda_Web\bin\Debug\net6.0\Newtonsoft.Json.dll
