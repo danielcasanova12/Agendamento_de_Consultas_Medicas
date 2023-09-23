@@ -1,11 +1,53 @@
 @page
 @model Agenda_Web.Pages.Paciente.Index
-@{
-    ViewData["Title"] = "Index";
-}
 
-<h1>@ViewData["Title"]</h1>
+<h1>Pacientes</h1>
+
+<a class="btn btn-primary" href="Create/Paciente">Criar novo paciente</a>
 
 <div>
-    
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Número de identificação</th>
+                <th>Histórico médico</th>
+                <th>Consultas agendadas</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var paciente in Model.Pacientes)
+            {
+                <tr>
+                    <td>@paciente.IdPaciente</td>
+                    <td>@paciente.Nome</td>
+                    <td>@paciente.Sobrenome</td>
+                    <td>@paciente.NúmeroIdentificação</td>
+                    <td>@paciente.HistoricoMedico</td>
+                    <td>
+                        @if (paciente.ConsultasAgendadas != null && paciente.ConsultasAgendadas.Any())
+                        {
+                            <ul class="list-unstyled">
+                                @foreach (var consulta in paciente.ConsultasAgendadas)
+                                {
+                                    <li>@consulta</li>
+                                }
+                            </ul>
+                        }
+                        else
+                        {
+                            <p>Nenhuma consulta agendada</p>
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" href="/Paciente/Editar/@paciente.IdPaciente">Editar</a>
+                        <a class="btn btn-danger" href="/Paciente/Delete/@paciente.IdPaciente">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
