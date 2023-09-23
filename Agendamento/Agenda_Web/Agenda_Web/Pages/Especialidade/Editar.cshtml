@@ -1,0 +1,22 @@
+@page "{id:int}"
+@model Agenda_Web.Pages.Especialidade.EditarModel
+@{
+}
+
+<h1>Editar Especialidade</h1>
+
+<form method="post" asp-page-handler="put">
+    <input type="hidden" name="_method" value="PUT" />
+    <input type="hidden" asp-for="Especialidade.IdEspecialidade" name="id" /> <!-- Use "id" como nome do parâmetro para o ID da especialidade na URL -->
+    <div class="form-group">
+        <label for="Nome">Nome:</label>
+        <input type="text" class="form-control" id="Nome" asp-for="Especialidade.Nome" name="nome" required /> <!-- Use "nome" como nome do parâmetro para o nome da especialidade -->
+    </div>
+    <div class="form-group">
+        <label for="Descrição">Descrição:</label>
+        <input type="text" class="form-control" id="Descrição" asp-for="Especialidade.Descrição" name="descrição" required /> <!-- Use "descrição" como nome do parâmetro para a descrição da especialidade -->
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+<a class="btn btn-secondary" href="/Especialidade/Index">Voltar</a>
