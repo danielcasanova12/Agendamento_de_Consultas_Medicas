@@ -1,0 +1,49 @@
+@page "{id:int}"
+@model Agenda_Web.Pages.Consulta.EditModel
+@{
+}
+
+<h1>Editar Consulta</h1>
+
+<form method="post" asp-page-handler="Put">
+    <input type="hidden" name="_method" value="PUT" />
+    <input type="hidden" asp-for="Consulta.IdConsulta" name="id" /> <!-- Use "id" como nome do parâmetro para o ID da consulta na URL -->
+    <div class="form-group">
+        <label for="medico">Médico:</label>
+        <select class="form-control" id="medico" asp-for="Consulta.MedicoId" name="medicoId" required>
+            <option value="">Selecione um médico</option>
+            @foreach (var medico in Model.Medicos)
+            {
+                <option value="@medico.Id">@medico.Nome</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="paciente">Paciente:</label>
+        <select class="form-control" id="paciente" asp-for="Consulta.PacienteId" name="pacienteId" required>
+            <option value="">Selecione um paciente</option>
+            @foreach (var paciente in Model.Pacientes)
+            {
+                <option value="@paciente.Id">@paciente.Nome</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="dataHora">Data e Hora:</label>
+        <input type="datetime-local" class="form-control" id="dataHora" asp-for="Consulta.DataHora" name="dataHora" required>
+    </div>
+    <div class="form-group">
+        <label for="tipo">Tipo de Consulta:</label>
+        <select class="form-control" id="tipo" asp-for="Consulta.Tipo" name="tipo" required>
+            <option value="Presencial">Presencial</option>
+            <option value="Online">Online</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="observacoes">Observações:</label>
+        <textarea class="form-control" id="observacoes" asp-for="Consulta.Observacoes" name="observacoes"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+<a class="btn btn-secondary" asp-page="/Consulta/Index">Voltar</a>
