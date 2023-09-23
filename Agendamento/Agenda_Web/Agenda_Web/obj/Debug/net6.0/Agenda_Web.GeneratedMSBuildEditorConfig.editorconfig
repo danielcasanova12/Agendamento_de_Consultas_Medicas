@@ -16,12 +16,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\luana\OneDrive\Documentos\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\Agenda_Web\Agenda_Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXNwZWNpYWxpZGFkZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXNwZWNpYWxpZGFkZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXNwZWNpYWxpZGFkZVxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Index.cshtml]
@@ -62,6 +86,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXBjaW9uaXN0YVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXBjaW9uaXN0YVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXBjaW9uaXN0YVxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/luana/OneDrive/Documentos/GitHub/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Index.cshtml]
