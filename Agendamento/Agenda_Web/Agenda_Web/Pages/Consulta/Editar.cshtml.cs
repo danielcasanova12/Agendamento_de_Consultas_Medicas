@@ -22,7 +22,7 @@ namespace Agenda_Web.Pages.Consulta
         }
 
         [BindProperty]
-        public ConsultaModel Consulta { get; set; }
+        public ClassModels.ConsultaModel Consulta { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

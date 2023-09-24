@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Agenda_Web.ApiUrl;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using EspecialidadeModels; 
 
 namespace Agenda_Web.Pages.Especialidade
 {
@@ -22,8 +21,17 @@ namespace Agenda_Web.Pages.Especialidade
             _httpClient.BaseAddress = new Uri(apiUrls.Especialidade); 
         }
 
-        [BindProperty]
-        public EspecialidadeModel Especialidade { get; set; }
+        private EspecialidadeModel especialidade;
+
+        public classModels.EspecialidadeModel GetEspecialidade()
+        {
+            return especialidade;
+        }
+
+        public void SetEspecialidade(EspecialidadeModel value)
+        {
+            especialidade = value;
+        }
 
         public void OnGet()
         {
@@ -35,7 +43,7 @@ namespace Agenda_Web.Pages.Especialidade
 
             try
             {
-                var json = JsonSerializer.Serialize(Especialidade);
+                var json = JsonSerializer.Serialize(GetEspecialidade());
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await _httpClient.PostAsync(apiUrl, content);

@@ -14,6 +14,7 @@ namespace Agenda_Web.Pages.Consulta
     {
         private readonly HttpClient _httpClient;
         private readonly ApiUrls _apiUrls;
+        private ConsultaModel consulta;
 
         public CreateModel(IHttpClientFactory httpClientFactory, ApiUrls apiUrls)
         {
@@ -23,7 +24,7 @@ namespace Agenda_Web.Pages.Consulta
         }
 
         [BindProperty]
-        public ConsultaModel Consulta { get; set; }
+        public ClassModels.ConsultaModel Consulta { get => consulta; set => consulta = value; }
 
         public void OnGet()
         {
