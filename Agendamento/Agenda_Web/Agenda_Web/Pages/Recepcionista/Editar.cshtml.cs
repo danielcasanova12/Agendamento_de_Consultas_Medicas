@@ -38,7 +38,7 @@ namespace Agenda_Web.Pages.Recepcionista
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    Recepcionista = JsonConvert.DeserializeObject<RecepcionistaEditModel>(content);
+                    Recepcionista = JsonConvert.DeserializeObject<ClassModels.RecepcionistaModel>(content);
 
                     if (Recepcionista == null)
                     {
