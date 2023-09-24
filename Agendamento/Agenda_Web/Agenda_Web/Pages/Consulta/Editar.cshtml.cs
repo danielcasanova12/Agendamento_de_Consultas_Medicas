@@ -3,10 +3,12 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Agenda_Web.ApiUrl; 
+using Agenda_Web.ApiUrl;
+using ClassModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
- 
+using Newtonsoft.Json;
+
 
 namespace Agenda_Web.Pages.Consulta
 {
@@ -70,7 +72,8 @@ namespace Agenda_Web.Pages.Consulta
 
             try
             {
-                var json = JsonSerializer.Serialize(Consulta);
+                var json = JsonConvert.SerializeObject(Consulta);
+                //var json = JsonSerializer.Serialize(Consulta);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await _httpClient.PutAsync(apiUrl, content);

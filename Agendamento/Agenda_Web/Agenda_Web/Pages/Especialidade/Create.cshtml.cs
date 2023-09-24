@@ -4,6 +4,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Agenda_Web.ApiUrl;
+using ClassModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -28,7 +29,7 @@ namespace Agenda_Web.Pages.Especialidade
             return especialidade;
         }
 
-        public void SetEspecialidade(Especialidade value)
+        public void SetEspecialidade(EspecialidadeModel value)
         {
             especialidade = value;
         }

@@ -1,9 +1,11 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Agenda_Web.ApiUrl; 
+using Agenda_Web.ApiUrl;
+using ClassModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 
 namespace Agenda_Web.Pages.Consulta
