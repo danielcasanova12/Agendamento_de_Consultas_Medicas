@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 
-namespace Agenda_Web.Pages.Medico
+namespace Agenda_Web.Pages.Especialidade
 {
     public class EditarModel : PageModel
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Agenda_Web.ApiUrl; 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Consulta.Models; 
+ 
 
 namespace Agenda_Web.Pages.Consulta
 {
