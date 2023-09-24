@@ -13,10 +13,11 @@ namespace Agenda_Web.Pages.Recepcionista
         private readonly HttpClient _httpClient;
         private readonly ApiUrls _apiUrls;
 
-        public DeleteModel(ApiUrls apiUrls, IHttpClientFactory httpClientFactory)
+        public ClassModels.DeleteModel(ApiUrls apiUrls,
+                           IHttpClientFactory httpClientFactory)
         {
             _apiUrls = apiUrls;
-            _httpClient = httpClientFactory.CreateClient();
+            _httpClient = httpClientFactory.CreateClientNewStruct;
         }
 
         public ClassModels.RecepcionistaModel Recepcionista { get; private set; }
@@ -90,5 +91,48 @@ namespace Agenda_Web.Pages.Recepcionista
                 return BadRequest("Erro ao se conectar à API: " + ex.Message);
             }
         }
+
+    internal struct NewStruct
+    {
+        public global::System.Object Item1;
+        public global::System.Object Item2;
+
+        public NewStruct(global::System.Object item1, global::System.Object item2)
+        {
+            Item1 = item1;
+            Item2 = item2;
+        }
+
+        public override global::System.Boolean Equals(global::System.Object obj)
+        {
+            return obj is NewStruct other &&
+                   EqualityComparer<global::System.Object>.Default.Equals(Item1, other.Item1) &&
+                   EqualityComparer<global::System.Object>.Default.Equals(Item2, other.Item2);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            global::System.Int32 hashCode = -1030903623;
+            hashCode = hashCode * -1521134295 + EqualityComparer<global::System.Object>.Default.GetHashCode(Item1);
+            hashCode = hashCode * -1521134295 + EqualityComparer<global::System.Object>.Default.GetHashCode(Item2);
+            return hashCode;
+        }
+
+        public void Deconstruct(out global::System.Object item1, out global::System.Object item2)
+        {
+            item1 = Item1;
+            item2 = Item2;
+        }
+
+        public static implicit operator (global::System.Object, global::System.Object)(NewStruct value)
+        {
+            return (value.Item1, value.Item2);
+        }
+
+        public static implicit operator NewStruct((global::System.Object, global::System.Object) value)
+        {
+            return new NewStruct(value.Item1, value.Item2);
+        }
     }
+}
 }
