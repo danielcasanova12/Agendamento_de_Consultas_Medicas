@@ -23,7 +23,7 @@ namespace Agenda_Web.Pages.Especialidade
 
         private EspecialidadeModel especialidade;
 
-        public classModels.EspecialidadeModel GetEspecialidade()
+        public ClassModels.EspecialidadeModel GetEspecialidade()
         {
             return especialidade;
         }

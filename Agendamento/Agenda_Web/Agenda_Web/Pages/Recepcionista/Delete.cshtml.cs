@@ -19,7 +19,7 @@ namespace Agenda_Web.Pages.Recepcionista
             _httpClient = httpClientFactory.CreateClient();
         }
 
-        public RecepcionistaModel Recepcionista { get; private set; }
+        public classModels.RecepcionistaModel Recepcionista { get; private set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

@@ -13,7 +13,7 @@ namespace Agenda_Web.Pages.Recepcionista
         private readonly HttpClient _httpClient;
 
         [BindProperty]
-        public ClassModels.RecepcionistaModel RecepcionistaModel { get; set; }
+        //public ClassModels.RecepcionistaModel RecepcionistaModel { get; set; }
 
         public CreateModel(IHttpClientFactory httpClientFactory)
         {
