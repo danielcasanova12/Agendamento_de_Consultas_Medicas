@@ -1,0 +1,20 @@
+@page
+@model MedicoCreateModel
+
+<h1>Adicionar Novo Médico</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Nome">Nome:</label>
+        <input type="text" asp-for="Nome" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="Especialidade">Especialidade:</label>
+        <input type="text" asp-for="Especialidade" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="NumeroRegistroProfissional">Número de Registro Profissional:</label>
+        <input type="text" asp-for="NumeroRegistroProfissional" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar Médico</button>
+</form>

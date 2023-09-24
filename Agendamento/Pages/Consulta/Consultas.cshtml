@@ -1,0 +1,51 @@
+@page
+@model List<ConsultaModel>
+
+    <h1>Consultas</h1>
+
+    <p>
+        <a asp-page="Criar">Agendar Nova Consulta</a>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Médico</th>
+                <th>Paciente</th>
+                <th>Data e Hora</th>
+                <th>Tipo</th>
+                <th>Observações</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var consulta in Model)
+        {
+            <tr>
+                <td>@consulta.IdConsulta</td>
+                <td>@consulta.Medico?.Nome</td>
+                <td>@consulta.Paciente?.Nome</td>
+                <td>@consulta.DataHora</td>
+                <td>@consulta.Tipo</td>
+                <td>@consulta.Observações</td>
+                <td>
+                    <a asp-page="Editar" asp-route-id="@consulta.IdConsulta">Edit</a> |
+                    <a asp-page-handler="Excluir" asp-route-id="@consulta.IdConsulta" class="text-danger"
+                       data-confirm="Tem certeza de que deseja cancelar esta consulta?">Cancelar</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    @section Scripts {
+        <script>
+        // Adicionar confirmação de cancelamento
+        $(document).ready(function () {
+            $('a[data-confirm]').click(function () {
+                return confirm($(this).data('confirm'));
+            });
+        });
+        </script>
+    }
