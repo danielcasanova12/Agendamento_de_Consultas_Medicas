@@ -10,7 +10,7 @@ namespace Agenda_Web.Pages.Recepcionista
     public class EditarModel : PageModel
     {
         private readonly HttpClient _httpClient;
-        private readonly ApiUrls _apiUrls;
+        //private readonly ApiUrls _apiUrls;
 
         public EditarModel(ApiUrls apiUrls, IHttpClientFactory httpClientFactory)
         {
@@ -63,7 +63,7 @@ namespace Agenda_Web.Pages.Recepcionista
 
         public async Task<IActionResult> OnPostAsync(int id)
         {
-            var apiUrl = _apiUrls.Recepcionista + $"/{id}"; 
+            var apiUrl = $"https://localhost:7018/api/Recepcionista/{id}"; 
 
             try
             {
