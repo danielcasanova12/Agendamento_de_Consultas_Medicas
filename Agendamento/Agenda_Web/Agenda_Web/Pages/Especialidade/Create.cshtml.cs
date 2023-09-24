@@ -22,6 +22,9 @@ namespace Agenda_Web.Pages.Especialidade
             _httpClient.BaseAddress = new Uri(apiUrls.Especialidade); 
         }
 
+        [BindProperty]
+        public EspecialidadeModel Especialidade { get; set; }
+
         private EspecialidadeModel especialidade;
 
         public ClassModels.EspecialidadeModel GetEspecialidade()
