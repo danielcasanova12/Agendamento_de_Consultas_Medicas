@@ -21,6 +21,9 @@ namespace Agenda_Web.Pages.Recepcionista
             _httpClient = httpClientFactory.CreateClient();
         }
 
+        [BindProperty]
+        public RecepcionistaModel Recepcionista { get; set; }
+
         public IActionResult OnGet()
         {
             return Page();
@@ -36,7 +39,7 @@ namespace Agenda_Web.Pages.Recepcionista
             try
             {
                 var apiUrl = "http://localhost:5219/api/Recepcionista"; 
-                var recepcionistaJson = JsonConvert.SerializeObject(RecepcionistaModel);
+                var recepcionistaJson = JsonConvert.SerializeObject(Recepcionista);
                 var content = new StringContent(recepcionistaJson, Encoding.UTF8, "application/json");
                 var response = await _httpClient.PostAsync(apiUrl, content);
 
