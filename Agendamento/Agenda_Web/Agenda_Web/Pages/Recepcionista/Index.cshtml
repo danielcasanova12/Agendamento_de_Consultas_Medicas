@@ -1,11 +1,52 @@
 @page
 @model Agenda_Web.Pages.Recepcionista.Index
-@{
-    ViewData["Title"] = "Index";
-}
 
-<h1>@ViewData["Title"]</h1>
+<h1>Recepcionistas</h1>
+
+<a class="btn btn-primary" href="Recepcionista/Create">Criar novo recepcionista</a>
 
 <div>
-    
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Número de identificação</th>
+                <th>Número de telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recepcionista in Model.Recepcionistas)
+            {
+                <tr>
+                    <td>@recepcionista.IdRecepcionista</td>
+                    <td>@recepcionista.Nome</td>
+                    <td>@recepcionista.Sobrenome</td>
+                    <td>@recepcionista.NúmeroIdentificação</td>
+                    <td>@recepcionista.NúmeroTelefone</td>
+                    <td>
+                        @if (recepcionista.AgendamentosGerenciados != null && recepcionista.AgendamentosGerenciados.Any())
+                        {
+                            <ul class="list-unstyled">
+                                @foreach (var agenda in recepcionista.AgendamentosGerenciados)
+                                {
+                                    <li>@agenda</li>
+                                }
+                            </ul>
+                        }
+                        else
+                        {
+                            <p>Nenhum agendamento gerenciado</p>
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" href="/Recepcionista/Editar/@recepcionista.IdRecepcionista">Editar</a>
+                        <a class="btn btn-danger" href="/Recepcionista/Delete/@recepcionista.IdRecepcionista">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
