@@ -19,7 +19,7 @@ namespace Agenda_Web.Pages.Recepcionista
         }
 
         [BindProperty]
-        public RecepcionistaEditModel Recepcionista { get; set; }
+        public ClassModels.RecepcionistaModel Recepcionista { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

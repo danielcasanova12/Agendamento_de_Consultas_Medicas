@@ -14,7 +14,7 @@ namespace Agenda_Web.Pages.Consulta
     {
         private readonly HttpClient _httpClient;
         private readonly ApiUrls _apiUrls;
-        private ConsultaModel consulta;
+        private ClassModels.ConsultaModel consulta;
 
         public CreateModel(IHttpClientFactory httpClientFactory, ApiUrls apiUrls)
         {

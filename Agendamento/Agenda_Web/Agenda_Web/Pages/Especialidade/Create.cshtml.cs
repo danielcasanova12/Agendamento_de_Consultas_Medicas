@@ -28,7 +28,7 @@ namespace Agenda_Web.Pages.Especialidade
             return especialidade;
         }
 
-        public void SetEspecialidade(EspecialidadeModel value)
+        public void SetEspecialidade(Especialidade value)
         {
             especialidade = value;
         }
