@@ -10,9 +10,9 @@ namespace Agenda_Web.Pages.Recepcionista
     public class EditarModel : PageModel
     {
         private readonly HttpClient _httpClient;
-        //private readonly ApiUrls _apiUrls;
+        private readonly ApiUrls _apiUrls;
 
-        public EditarModel(ApiUrls apiUrls, IHttpClientFactory httpClientFactory)
+        public ClassModels.EditarModel(ApiUrls apiUrls, IHttpClientFactory httpClientFactory)
         {
             _apiUrls = apiUrls;
             _httpClient = httpClientFactory.CreateClient();
