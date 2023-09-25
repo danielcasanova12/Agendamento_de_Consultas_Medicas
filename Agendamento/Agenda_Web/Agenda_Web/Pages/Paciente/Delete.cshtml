@@ -1,11 +1,35 @@
-@page
+@page "{id:int}"
 @model Agenda_Web.Pages.Paciente.Delete
-@{
-    ViewData["Title"] = "Delete";
-}
 
-<h1>@ViewData["Title"]</h1>
+<body>
+    <div class="container mt-5">
+        <h1>Excluir Paciente</h1>
+        <p>Tem certeza de que deseja excluir o paciente abaixo?</p>
 
-<div>
-    
-</div>
+        <dl class="row">
+            <dt class="col-sm-2">ID:</dt>
+            <dd class="col-sm-10">@Model.PacienteModel.IdPaciente</dd>
+
+            <dt class="col-sm-2">Nome:</dt>
+            <dd class="col-sm-10">@Model.PacienteModel.Nome</dd>
+
+            <dt class="col-sm-2">Sobrenome:</dt>
+            <dd class="col-sm-10">@Model.PacienteModel.Sobrenome</dd>
+
+            <dt class="col-sm-2">Número de identificação:</dt>
+            <dd class="col-sm-10">@Model.PacienteModel.NúmeroIdentificação</dd>
+
+            <dt class="col-sm-2">Histórico médico:</dt>
+            <dd class="col-sm-10">@Model.PacienteModel.HistoricoMedico</dd>
+
+            <dt class="col-sm-2">Consultas agendadas:</dt>
+            <dd class="col-sm-10">@Model.PacienteModel.ConsultasAgendadas</dd>
+        </dl>
+
+        <form method="post">
+            <input type="hidden" asp-for="PacienteModel.IdPaciente" />
+            <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+            <a class="btn btn-secondary" href="/Paciente/Index">Cancelar</a>
+        </form>
+    </div>
+</body>
