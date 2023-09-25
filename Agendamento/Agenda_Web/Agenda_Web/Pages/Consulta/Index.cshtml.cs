@@ -1,24 +1,49 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Agenda_Web.ApiUrl;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 
-namespace Agenda_Web.Pages.Consulta
+namespace Agenda_Web.Pages
 {
-    public class Index : PageModel
+    public class ConsultasModel : PageModel
     {
-        private readonly ILogger<Index> _logger;
+        public List<ClassModels.ConsultaModel> Consultas { get; set; }
+        private readonly HttpClient _httpClient;
+        private readonly ApiUrls _apiUrls;
 
-        public Index(ILogger<Index> logger)
+        public ConsultasModel(ApiUrls apiUrls, IHttpClientFactory httpClientFactory)
         {
-            _logger = logger;
+            _apiUrls = apiUrls;
+            _httpClient = httpClientFactory.CreateClient();
         }
 
-        public void OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
+            try
+            {
+                var apiUrl = _apiUrls.Consulta; // Certifique-se de que você tem uma URL correta para listar as consultas
+                var response = await _httpClient.GetAsync(apiUrl);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    Consultas = JsonConvert.DeserializeObject<List<ClassModels.ConsultaModel>>(content);
+                    return Page();
+                }
+                else
+                {
+                    return StatusCode((int)response.StatusCode);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Registre ou manipule a exceção de acordo com suas necessidades.
+                return BadRequest("Erro ao se conectar à API: " + ex.Message);
+            }
         }
     }
 }

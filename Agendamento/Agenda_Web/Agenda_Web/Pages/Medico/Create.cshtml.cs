@@ -41,7 +41,7 @@ namespace Agenda_Web.Pages.Medico
 
                 if (response.IsSuccessStatusCode)
                 {
-                    return RedirectToPage("/Medico/Index"); // Redireciona para a página de listagem de médicos após a criação bem-sucedida
+                    return RedirectToPage("/Medico/Index"); // Redireciona para a p?gina de listagem de m?dicos ap?s a cria??o bem-sucedida
                 }
                 else
                 {
@@ -50,7 +50,7 @@ namespace Agenda_Web.Pages.Medico
             }
             catch (HttpRequestException)
             {
-                return BadRequest("Erro ao se conectar à API.");
+                return BadRequest("Erro ao se conectar ? API.");
             }
         }
     }

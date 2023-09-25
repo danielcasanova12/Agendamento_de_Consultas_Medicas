@@ -7,11 +7,11 @@
         public string Consulta { get; set; }
         public string Especialidade { get; set; }
         public string Recepcionista { get; set; }
-        // Adicione outras URLs da API conforme necessário
+        
 
         public ApiUrls()
         {
-            // O construtor padrão vazio é necessário para a injeção de dependência
+            //
         }
 
         public ApiUrls(string baseUrl)
@@ -21,7 +21,6 @@
             Consulta = $"{baseUrl}/api/Consulta";
             Especialidade = $"{baseUrl}/api/Especialidade";
             Recepcionista = $"{baseUrl}/api/Recepcionista";
-            // Inclua outras URLs da API aqui
         }
     }
 

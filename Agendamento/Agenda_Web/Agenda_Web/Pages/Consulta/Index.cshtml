@@ -1,11 +1,37 @@
 @page
-@model Agenda_Web.Pages.Consulta.Index
-@{
-    ViewData["Title"] = "Index";
-}
+@model Agenda_Web.Pages.ConsultasModel
 
-<h1>@ViewData["Title"]</h1>
+<h1>Consultas</h1>
 
-<div>
-    
-</div>
+<p>
+    <a class="btn btn-primary" href="/Consulta/Create">Criar Consulta</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Médico</th>
+            <th>Data e Hora</th>
+            <th>Tipo</th>
+            <th>Observações</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var consulta in Model.Consultas)
+        {
+            <tr>
+                <td>@consulta.IdConsulta</td>
+                <td>@(consulta.Medico != null ? consulta.Medico.Nome : "N/A")</td>
+                <td>@consulta.DataHora</td>
+                <td>@consulta.Tipo</td>
+                <td>
+                    <a class="btn btn-info" href="/Consultas/Editar/@consulta.IdConsulta">Editar</a>
+                    <a class="btn btn-danger" href="/Consulta/Delete/@consulta.IdConsulta">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
