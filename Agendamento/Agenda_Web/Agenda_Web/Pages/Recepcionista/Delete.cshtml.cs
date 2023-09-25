@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Agenda_Web.ApiUrl;
@@ -12,6 +13,50 @@ namespace Agenda_Web.Pages.Recepcionista
 {
     public class DeleteModel : PageModel
     {
+        [BindProperty]
+        public RecepcionistaModel RecepcionistaModel { get; set; } = new();
+        // public Delete()
+        // {
+
+        // }
+
+        public async Task<IActionResult> OnGetAsync(int? id) 
+        {
+            if (id == null) {
+                return NotFound();
+            }
+
+            var httpClient = new HttpClient();
+            var url = $"http://localhost:5219/api/Recepcionista/{id}";
+            var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
+            var response = await httpClient.SendAsync(requestMessage);
+
+            if (!response.IsSuccessStatusCode) {
+                return NotFound();
+            }
+
+            var content = await response.Content.ReadAsStringAsync();
+            RecepcionistaModel = JsonConvert.DeserializeObject<RecepcionistaModel>(content)!;
+
+            return Page();
+        }
+
+        public async Task<IActionResult> OnPostAsync(int id)
+        {
+            var httpClient = new HttpClient();
+            var url = $"http://localhost:5219/api/Recepcionista/{id}";
+            var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url);
+            var response = await httpClient.SendAsync(requestMessage);
+            
+            if (response.IsSuccessStatusCode) {
+                return RedirectToPage("/Paciente/Index");
+            } else if (response.StatusCode == HttpStatusCode.NotFound) {
+                return NotFound();
+            } else {
+                return Page();
+            }
+        }
+
     //     private readonly HttpClient _httpClient;
     //     private readonly ApiUrls _apiUrls;
 
