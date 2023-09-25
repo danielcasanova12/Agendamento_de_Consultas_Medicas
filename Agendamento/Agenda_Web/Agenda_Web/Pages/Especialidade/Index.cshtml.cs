@@ -1,24 +1,29 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ClassModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace Agenda_Web.Pages.Especialidade
 {
     public class Index : PageModel
     {
-        private readonly ILogger<Index> _logger;
-
-        public Index(ILogger<Index> logger)
+        public List<EspecialidadeModel> Especialidades { get; set; }
+        public Index()
         {
-            _logger = logger;
+            
         }
 
-        public void OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
+            var httpClient = new HttpClient();
+            var url = "http://localhost:5219/api/Especialidade";
+            var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
+            var response = await httpClient.SendAsync(requestMessage);
+            var content = await response.Content.ReadAsStringAsync();
+
+            Especialidades = JsonConvert.DeserializeObject<List<EspecialidadeModel>>(content)!;
+            
+            return Page();
         }
     }
 }

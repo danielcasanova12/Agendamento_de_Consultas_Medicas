@@ -9,109 +9,109 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Agenda_Web
 build_property.RootNamespace = Agenda_Web
-build_property.ProjectDir = C:\Users\lilit\OneDrive\Documentos\faculdade\2023-2\tds\Agendamento_de_Consultas_Medicas\Agendamento\Agenda_Web\Agenda_Web\
+build_property.ProjectDir = c:\Users\lilit\OneDrive\Documentos\faculdade\2023-2\tds\Agendamento_de_Consultas_Medicas\Agendamento\Agenda_Web\Agenda_Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\lilit\OneDrive\Documentos\faculdade\2023-2\tds\Agendamento_de_Consultas_Medicas\Agendamento\Agenda_Web\Agenda_Web
+build_property.MSBuildProjectDirectory = c:\Users\lilit\OneDrive\Documentos\faculdade\2023-2\tds\Agendamento_de_Consultas_Medicas\Agendamento\Agenda_Web\Agenda_Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Create.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Delete.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Editar.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFcRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Index.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Consulta/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Error.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Create.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXNwZWNpYWxpZGFkZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Delete.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXNwZWNpYWxpZGFkZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Editar.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXNwZWNpYWxpZGFkZVxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Index.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Especialidade/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXNwZWNpYWxpZGFkZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Index.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Medico/Create.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Medico/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWNvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Medico/Delete.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Medico/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWNvXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Medico/Editar.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Medico/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWNvXEVkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Medico/Index.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Medico/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWNvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Paciente/Create.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Paciente/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFjaWVudGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Paciente/Index.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Paciente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFjaWVudGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Privacy.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Create.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXBjaW9uaXN0YVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Delete.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXBjaW9uaXN0YVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Editar.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXBjaW9uaXN0YVxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Index.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Recepcionista/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXBjaW9uaXN0YVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/_ViewImports.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/_ViewStart.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Shared/_Layout.cshtml]
+[c:/Users/lilit/OneDrive/Documentos/faculdade/2023-2/tds/Agendamento_de_Consultas_Medicas/Agendamento/Agenda_Web/Agenda_Web/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4oaj3bj37l

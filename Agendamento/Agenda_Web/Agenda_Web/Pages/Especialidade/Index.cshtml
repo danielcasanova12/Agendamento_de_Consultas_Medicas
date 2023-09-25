@@ -1,11 +1,49 @@
 @page
 @model Agenda_Web.Pages.Especialidade.Index
-@{
-    ViewData["Title"] = "Index";
-}
 
-<h1>@ViewData["Title"]</h1>
+<h1>Especialidades</h1>
+
+<a class="btn btn-primary" href="Especialidade/Create">Criar nova especialidade</a>
 
 <div>
-    
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Médicos</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var especialidade in Model.Especialidades)
+            {
+                <tr>
+                    <td>@especialidade.IdEspecialidade</td>
+                    <td>@especialidade.Nome</td>
+                    <td>@especialidade.Descrição</td>
+                    <td>
+                        @if (especialidade.Medicos != null && especialidade.Medicos.Any())
+                        {
+                            <ul class="list-unstyled">
+                                @foreach (var medico in especialidade.Medicos)
+                                {
+                                    <li>@medico</li>
+                                }
+                            </ul>
+                        }
+                        else
+                        {
+                            <p>Nenhum agendamento gerenciado</p>
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" href="/Especialidade/Editar/@especialidade.IdEspecialidade">Editar</a>
+                        <a class="btn btn-danger" href="/Especialidade/Delete/@especialidade.IdEspecialidade">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
