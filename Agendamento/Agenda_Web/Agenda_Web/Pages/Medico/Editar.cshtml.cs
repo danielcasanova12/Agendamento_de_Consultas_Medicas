@@ -1,10 +1,10 @@
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Agenda_Web.ApiUrl;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace Agenda_Web.Pages.Medico
 {
@@ -64,7 +64,7 @@ namespace Agenda_Web.Pages.Medico
 
         public async Task<IActionResult> OnPostAsync(int id)
         {
-            var apiUrl = $"https://localhost:7018/api/Medico/{id}";
+            var apiUrl = _apiUrls.Medico + $"/{id}";
 
             try
             {

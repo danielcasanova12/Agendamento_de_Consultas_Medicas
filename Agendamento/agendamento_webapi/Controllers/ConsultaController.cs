@@ -37,22 +37,38 @@ namespace agendamento_webapi.Controllers
             return Ok(consulta);
         }
 
-        // Ação POST para agendar uma nova consulta
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] ConsultaModel consulta)
+        public async Task<IActionResult> CriarConsultaMedica(int idMedico, int idPaciente, [FromBody] ConsultaModel consultaMedica)
         {
-            if (consulta == null)
+            try
             {
-                return BadRequest();
+                // Verifique se os médicos e pacientes existem no banco de dados
+                var medico = await _context.Medicos.FindAsync(idMedico);
+                var paciente = await _context.Pacientes.FindAsync(idPaciente);
+
+                if (medico == null || paciente == null)
+                {
+                    return NotFound("Médico ou paciente não encontrado.");
+                }
+
+                // Associe o médico e o paciente à consulta médica
+                consultaMedica.Medico = medico;
+                consultaMedica.Paciente = paciente;
+
+                // Adicione a consulta médica ao contexto e salve no banco de dados
+                _context.Consultas.Add(consultaMedica);
+                await _context.SaveChangesAsync();
+
+                return Ok("Consulta médica criada com sucesso.");
             }
-
-            _context.Consultas!.Add(consulta);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(Get), new { id = consulta.IdConsulta }, consulta);
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno: {ex.Message}");
+            }
         }
 
-        // Ação PUT para atualizar uma consulta por ID
+
+
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] ConsultaModel consulta)
         {

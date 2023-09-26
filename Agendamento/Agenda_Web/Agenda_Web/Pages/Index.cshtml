@@ -4,21 +4,19 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
+<div class="container text-center mt-5">
     <h1 class="display-4">Agendamento de Consultas Médicas</h1>
-    <figure class="container-img">
-        <img src="~/images/consulta.jpg" alt="consulta" width="250" height="250" class="center">
-    </figure>
-    
-
-    <!-- Links para as páginas desejadas -->
-    <ul>
-        <li><a href="/Medico">Médico</a></li>
-        <li><a href="/Especialidade">Especialidade</a></li>
-        <li><a href="/Consulta">Consulta</a></li>
-        <li><a href="/Paciente">Paciente</a></li>
-        <li><a href="/Recepcionista">Recepcionista</a></li>
+    <div class="row mt-4">
+        <div class="col-md-6 offset-md-3">
+            <img src="~/images/consulta.jpg" alt="consulta" width="250" height="250" class="img-fluid rounded-circle mx-auto d-block">
+        </div>
+    </div>
+    <ul class="list-unstyled mt-4">
+        <li><a href="/Medico" class="btn btn-primary btn-lg">Médico</a></li>
+        <li><a href="/Especialidade" class="btn btn-success btn-lg">Especialidade</a></li>
+        <li><a href="/Consulta" class="btn btn-info btn-lg">Consulta</a></li>
+        <li><a href="/Paciente" class="btn btn-warning btn-lg">Paciente</a></li>
+        <li><a href="/Recepcionista" class="btn btn-danger btn-lg">Recepcionista</a></li>
     </ul>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p class="mt-4">Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-

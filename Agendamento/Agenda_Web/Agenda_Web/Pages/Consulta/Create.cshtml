@@ -3,8 +3,13 @@
 
 <h1>Criar Consulta</h1>
 
+<h1>Lista de Médicos</h1>
+
+
+
+
 <form method="post">
-    <div class="form-group">
+@*    <div class="form-group">
         <label for="MedicoId">Médico:</label>
         <select class="form-control" id="MedicoId" asp-for="Consulta.Medico.IdMedico" required>
             <option value="">Selecione um médico</option>
@@ -26,6 +31,7 @@
         </select>
     </div>
 
+
     <div class="form-group">
         <label for="DataHora">Data e Hora:</label>
         <input type="datetime-local" class="form-control" id="DataHora" asp-for="Consulta.DataHora" required />
@@ -38,10 +44,10 @@
             <option value="Online">Online</option>
         </select>
     </div>
-
+*@
 
 
     <button type="submit" class="btn btn-primary">Criar Consulta</button>
 </form>
 
-<a class="btn btn-secondary" href="/Consultas/Index">Voltar para a Lista de Consultas</a>
+<a class="btn btn-secondary" href="/Consulta/Index">Voltar para a Lista de Consultas</a>
