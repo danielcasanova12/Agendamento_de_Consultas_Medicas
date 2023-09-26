@@ -1,19 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="bootstrap" Version="5.3.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="ClassModels">
-      <HintPath>..\..\ClassModels\ClassModels\bin\Debug\net6.0\ClassModels.dll</HintPath>
+      <HintPath>..\..\..\Agendamento_de_Consultas_Medicas\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ClassModels.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj": {}
+    "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas2\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj": {
+    "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas2\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj",
+        "projectUniqueName": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas2\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj",
         "projectName": "Agenda_Web",
-        "projectPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj",
+        "projectPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas2\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj",
         "packagesPath": "C:\\Users\\daneil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\Agenda_Web\\Agenda_Web\\obj\\",
+        "outputPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas2\\Agenda_Web\\Agenda_Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\daneil\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "F:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -36,16 +36,12 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "bootstrap": {
-              "target": "Package",
-              "version": "[5.3.2, )"
             }
           },
           "imports": [
