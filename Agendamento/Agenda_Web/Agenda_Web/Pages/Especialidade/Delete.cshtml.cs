@@ -1,91 +1,58 @@
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Agenda_Web.ApiUrl;
+using ClassModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 
 namespace Agenda_Web.Pages.Especialidade
 {
-    public class DeleteModel : PageModel
+    public class Delete : PageModel
     {
-        private readonly HttpClient _httpClient;
-        private readonly ApiUrls _apiUrls;
-
-        public DeleteModel(ApiUrls apiUrls, IHttpClientFactory httpClientFactory)
+        [BindProperty]
+        public EspecialidadeModel EspecialidadeModel { get; set; } = new();
+        public Delete()
         {
-            _apiUrls = apiUrls;
-            _httpClient = httpClientFactory.CreateClient();
+
         }
 
-        [BindProperty]
-        public ClassModels.EspecialidadeModel Especialidade { get; private set; }
-
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int? id) 
         {
-            if (id == null)
-            {
+            if (id == null) {
                 return NotFound();
             }
 
-            var apiUrl = _apiUrls.Especialidade + $"/{id}";
+            var httpClient = new HttpClient();
+            var url = $"http://localhost:5219/api/Especialidade/{id}";
+            var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
+            var response = await httpClient.SendAsync(requestMessage);
 
-            try
-            {
-                var response = await _httpClient.GetAsync(apiUrl);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-                    Especialidade = JsonConvert.DeserializeObject<ClassModels.EspecialidadeModel>(content);
-
-                    if (Especialidade == null)
-                    {
-                        return NotFound();
-                    }
-
-                    return Page();
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    return StatusCode((int)response.StatusCode);
-                }
+            if (!response.IsSuccessStatusCode) {
+                return NotFound();
             }
-            catch (Exception ex)
-            {
-                return BadRequest("Erro ao se conectar à API: " + ex.Message);
-            }
+
+            var content = await response.Content.ReadAsStringAsync();
+            EspecialidadeModel = JsonConvert.DeserializeObject<EspecialidadeModel>(content)!;
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int id)
         {
-            var apiUrl = $"{_apiUrls.Especialidade}/{id}"; 
-
-            try
-            {
-                var response = await _httpClient.DeleteAsync(apiUrl);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    return RedirectToPage("./Index");
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    return StatusCode((int)response.StatusCode);
-                }
-            }
-            catch (Exception ex)
-            {
-                return BadRequest("Erro ao se conectar à API: " + ex.Message);
+            var httpClient = new HttpClient();
+            var url = $"http://localhost:5219/api/Especialidade/{id}";
+            var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url);
+            var response = await httpClient.SendAsync(requestMessage);
+            
+            if (response.IsSuccessStatusCode) {
+                return RedirectToPage("/Especialidade/Index");
+            } else if (response.StatusCode == HttpStatusCode.NotFound) {
+                return NotFound();
+            } else {
+                return Page();
             }
         }
     }
