@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dYeWJGlOgYBeKnrJFLncg+EdLb5D+xF6cSJF9KyvRnQMfsTZuOpaIeGjlazvynUT7JP14FXmZT9JGGwQtj2UPA==",
+  "dgSpecHash": "WKbcqTHyWZAkf7JBmYLY22luKdQaZnT/tx8c8NuUeHj/75WMjK+RiRRqhHlwMLmT24DnfVILmuXk/PPG+Qxmpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lilit\\OneDrive\\Documentos\\faculdade\\2023-2\\tds\\Agendamento_de_Consultas_Medicas\\Agendamento\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj",
+  "projectFilePath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas2010\\Agendamento\\Agenda_Web\\Agenda_Web\\Agenda_Web.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lilit\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\daneil\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

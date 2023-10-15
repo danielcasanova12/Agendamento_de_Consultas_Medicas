@@ -26,13 +26,19 @@ namespace agendamento_webapi.Migrations
                     b.Property<DateTime?>("DataHora")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("MedicoIdMedico")
+                    b.Property<int?>("IdMedico")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("IdPaciente")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("MedicoModelIdMedico")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Observações")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("PacienteIdPaciente")
+                    b.Property<int?>("PacienteModelIdPaciente")
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("RecepcionistaModelIdRecepcionista")
@@ -43,9 +49,13 @@ namespace agendamento_webapi.Migrations
 
                     b.HasKey("IdConsulta");
 
-                    b.HasIndex("MedicoIdMedico");
+                    b.HasIndex("IdMedico");
 
-                    b.HasIndex("PacienteIdPaciente");
+                    b.HasIndex("IdPaciente");
+
+                    b.HasIndex("MedicoModelIdMedico");
+
+                    b.HasIndex("PacienteModelIdPaciente");
 
                     b.HasIndex("RecepcionistaModelIdRecepcionista");
 
@@ -143,12 +153,20 @@ namespace agendamento_webapi.Migrations
             modelBuilder.Entity("ClassModels.ConsultaModel", b =>
                 {
                     b.HasOne("ClassModels.MedicoModel", "Medico")
-                        .WithMany("ConsultasAgendadas")
-                        .HasForeignKey("MedicoIdMedico");
+                        .WithMany()
+                        .HasForeignKey("IdMedico");
 
                     b.HasOne("ClassModels.PacienteModel", "Paciente")
+                        .WithMany()
+                        .HasForeignKey("IdPaciente");
+
+                    b.HasOne("ClassModels.MedicoModel", null)
                         .WithMany("ConsultasAgendadas")
-                        .HasForeignKey("PacienteIdPaciente");
+                        .HasForeignKey("MedicoModelIdMedico");
+
+                    b.HasOne("ClassModels.PacienteModel", null)
+                        .WithMany("ConsultasAgendadas")
+                        .HasForeignKey("PacienteModelIdPaciente");
 
                     b.HasOne("ClassModels.RecepcionistaModel", null)
                         .WithMany("AgendamentosGerenciados")

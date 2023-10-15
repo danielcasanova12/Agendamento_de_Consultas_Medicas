@@ -66,17 +66,20 @@ namespace Agenda_WebConsultas.Pages.Consultas
             var apiUrl = "https://localhost:7018/api/Consulta";
             try
             {
-                // Ajuste os valores da Consulta conforme necessário
-                ConsultaModel consulta = new ConsultaModel
+                // Receba os dados do formulário
+                var medicoId = Request.Form["Consulta.Medico.IdMedico"];
+                var pacienteId = Request.Form["Consulta.Paciente.IdPaciente"];
+                var dataHora = Request.Form["Consulta.DataHora"];
+                var tipo = Request.Form["Consulta.Tipo"];
+
+                // Crie o objeto Consulta com os dados do formulário
+                var consulta = new ConsultaModel
                 {
-                    ConsultaMedica = new ConsultaMedicaModel
-                    {
-                        Medico = new MedicoModel { IdMedico = 11 }, // Exemplo de ID de médico
-                        Paciente = new PacienteModel { IdPaciente = 12 }, // Exemplo de ID de paciente
-                        DataHora = DateTime.Now, // Data e hora atual (ou qualquer outra data desejada)
-                        Tipo = 0, // Tipo da consulta
-                        Observacoes = "Observações da consulta" // Opcional
-                    }
+                    IdConsulta = null,
+                    IdMedico = int.Parse(medicoId),
+                    IdPaciente = int.Parse(pacienteId),
+                    DataHora = DateTime.Parse(dataHora),
+                    Tipo = TipoConsulta.Online,
                 };
 
                 // Serialize o objeto Consulta para JSON
@@ -92,7 +95,7 @@ namespace Agenda_WebConsultas.Pages.Consultas
                 else
                 {
                     Console.WriteLine(content);
-                    return StatusCode((int)response.StatusCode);
+                    return BadRequest(consulta);
                 }
             }
             catch (HttpRequestException)
@@ -101,19 +104,9 @@ namespace Agenda_WebConsultas.Pages.Consultas
             }
         }
 
+
+
     }
 
-    public class ConsultaModel
-    {
-        public ConsultaMedicaModel ConsultaMedica { get; set; }
-    }
 
-    public class ConsultaMedicaModel
-    {
-        public MedicoModel Medico { get; set; }
-        public PacienteModel Paciente { get; set; }
-        public DateTime DataHora { get; set; }
-        public int Tipo { get; set; }
-        public string Observacoes { get; set; }
-    }
 }
