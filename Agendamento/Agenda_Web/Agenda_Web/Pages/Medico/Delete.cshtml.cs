@@ -1,8 +1,10 @@
 using Agenda_Web.ApiUrl;
+using ClassModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -11,85 +13,47 @@ namespace Agenda_Web.Pages.Medico
     public class DeleteModel : PageModel
     {
 
-        private readonly HttpClient _httpClient;
-        private readonly ApiUrls _apiUrls;
-
-        public DeleteModel(ApiUrls apiUrls, IHttpClientFactory httpClientFactory)
+        [BindProperty]
+        public MedicoModel MedicoModel { get; set; } = new();
+        public DeleteModel()
         {
-            _apiUrls = apiUrls;
-            _httpClient = httpClientFactory.CreateClient();
+
         }
 
-        public ClassModels.MedicoModel Medico { get; private set; }
-
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int? id) 
         {
-            if (id == null)
-            {
+            if (id == null) {
                 return NotFound();
             }
 
-            var apiUrl = _apiUrls.Medico + $"/{id}";
+            var httpClient = new HttpClient();
+            var url = $"http://localhost:5219/api/Medico/{id}";
+            var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
+            var response = await httpClient.SendAsync(requestMessage);
 
-            try
-            {
-                var response = await _httpClient.GetAsync(apiUrl);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-                    Medico = JsonConvert.DeserializeObject<ClassModels.MedicoModel>(content);
-
-                    if (Medico == null)
-                    {
-                        return NotFound();
-                    }
-
-                    // Imprimir os dados no console
-                    Console.WriteLine($"Dados do Médico: ID={Medico.IdMedico}, Nome={Medico.Nome}, Especialidade={Medico.Especialidade}");
-
-                    return Page();
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    return StatusCode((int)response.StatusCode);
-                }
+            if (!response.IsSuccessStatusCode) {
+                return NotFound();
             }
-            catch (Exception ex)
-            {
-                return BadRequest("Erro ao se conectar à API: " + ex.Message);
-            }
+
+            var content = await response.Content.ReadAsStringAsync();
+            MedicoModel = JsonConvert.DeserializeObject<MedicoModel>(content)!;
+
+            return Page();
         }
-
 
         public async Task<IActionResult> OnPostAsync(int id)
         {
-            var apiUrl = $"{_apiUrls.Medico}/{id}"; // Construa a URL da API com o id
-
-            try
-            {
-                var response = await _httpClient.DeleteAsync(apiUrl);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    return RedirectToPage("./Index");
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    return StatusCode((int)response.StatusCode);
-                }
-            }
-            catch (Exception ex)
-            {
-                return BadRequest("Erro ao se conectar à API: " + ex.Message);
+            var httpClient = new HttpClient();
+            var url = $"http://localhost:5219/api/Medico/{id}";
+            var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url);
+            var response = await httpClient.SendAsync(requestMessage);
+            
+            if (response.IsSuccessStatusCode) {
+                return RedirectToPage("/Medico/Index");
+            } else if (response.StatusCode == HttpStatusCode.NotFound) {
+                return NotFound();
+            } else {
+                return Page();
             }
         }
 
