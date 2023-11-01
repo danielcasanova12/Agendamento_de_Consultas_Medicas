@@ -25,7 +25,7 @@ namespace Agenda_Web.Pages
         {
             try
             {
-                var apiUrl = _apiUrls.Consulta; // Certifique-se de que você tem uma URL correta para listar as consultas
+                var apiUrl = "http://localhost:5219/api/Consulta"; // Certifique-se de que vocï¿½ tem uma URL correta para listar as consultas
                 var response = await _httpClient.GetAsync(apiUrl);
 
                 if (response.IsSuccessStatusCode)
@@ -41,8 +41,8 @@ namespace Agenda_Web.Pages
             }
             catch (Exception ex)
             {
-                // Registre ou manipule a exceção de acordo com suas necessidades.
-                return BadRequest("Erro ao se conectar à API: " + ex.Message);
+                // Registre ou manipule a exceï¿½ï¿½o de acordo com suas necessidades.
+                return BadRequest("Erro ao se conectar ï¿½ API: " + ex.Message);
             }
         }
     }

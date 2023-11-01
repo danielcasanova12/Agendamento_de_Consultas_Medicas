@@ -76,8 +76,8 @@ namespace Agenda_WebConsultas.Pages.Consultas
                 var consulta = new ConsultaModel
                 {
                     IdConsulta = null,
-                    IdMedico = int.Parse(medicoId),
-                    IdPaciente = int.Parse(pacienteId),
+                    IdMedico = 1,
+                    IdPaciente =1,
                     DataHora = DateTime.Parse(dataHora),
                     Tipo = TipoConsulta.Online,
                 };
