@@ -21,6 +21,7 @@ namespace agendamento_webapi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var teste = 1;
             var especialidades = await _context.Especialidades!.ToListAsync();
             return Ok(especialidades);
         }
