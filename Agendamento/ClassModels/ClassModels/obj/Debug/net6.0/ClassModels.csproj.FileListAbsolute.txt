@@ -21,3 +21,15 @@ C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\Cl
 C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\refint\ClassModels.dll
 C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ClassModels.pdb
 C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ref\ClassModels.dll
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\bin\Debug\net6.0\ClassModels.deps.json
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\bin\Debug\net6.0\ClassModels.dll
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\bin\Debug\net6.0\ClassModels.pdb
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ClassModels.csproj.AssemblyReference.cache
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ClassModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ClassModels.AssemblyInfoInputs.cache
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ClassModels.AssemblyInfo.cs
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ClassModels.csproj.CoreCompileInputs.cache
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ClassModels.dll
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\refint\ClassModels.dll
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ClassModels.pdb
+C:\Users\daneil\Documents\GitHub\Agendamento_de_Consultas_Medicas2010\Agendamento\ClassModels\ClassModels\obj\Debug\net6.0\ref\ClassModels.dll

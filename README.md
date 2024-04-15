@@ -52,3 +52,10 @@ Para o desenvolvimento deste projeto, os seguintes requisitos devem ser atendido
 
 ## Como abrir:
 
+- Abra o projeto no Visual Studio Code;
+- Clique com o botão direito no arquivo Program.cs, que está dentro da pasta Agenda_Web;
+- Clique em "Open in Integrated Terminal";
+- No terminal, digite "dotnet watch run";
+- Clique com o botão direito no arquivo Program.cs, que está dentro da pasta agendamento_webapi;
+- Clique em "Open in Integrated Terminal";
+- No terminal, digite "dotnet watch run".

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\ClassModels\\ClassModels\\ClassModels.csproj",
+      "projectUniqueName": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas2010\\Agendamento\\ClassModels\\ClassModels\\ClassModels.csproj",
       "projectName": "ClassModels",
-      "projectPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\ClassModels\\ClassModels\\ClassModels.csproj",
+      "projectPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas2010\\Agendamento\\ClassModels\\ClassModels\\ClassModels.csproj",
       "packagesPath": "C:\\Users\\daneil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas\\Agendamento\\ClassModels\\ClassModels\\obj\\",
+      "outputPath": "C:\\Users\\daneil\\Documents\\GitHub\\Agendamento_de_Consultas_Medicas2010\\Agendamento\\ClassModels\\ClassModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\daneil\\AppData\\Roaming\\NuGet\\NuGet.Config"

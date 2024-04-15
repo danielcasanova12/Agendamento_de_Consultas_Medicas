@@ -15,20 +15,20 @@
 
             <dl class="row">
                 <dt class="col-sm-2">ID:</dt>
-                <dd class="col-sm-10">@Model.Medico.IdMedico</dd>
+                <dd class="col-sm-10">@Model.MedicoModel.IdMedico</dd>
 
                 <dt class="col-sm-2">Nome:</dt>
-                <dd class="col-sm-10">@Model.Medico.Nome</dd>
+                <dd class="col-sm-10">@Model.MedicoModel.Nome</dd>
 
                 <dt class="col-sm-2">Especialidade:</dt>
-                <dd class="col-sm-10">@Model.Medico.Especialidade</dd>
+                <dd class="col-sm-10">@Model.MedicoModel.Especialidade</dd>
 
                 <dt class="col-sm-2">Número de Registro Profissional:</dt>
-                <dd class="col-sm-10">@Model.Medico.NumeroRegistroProfissional</dd>
+                <dd class="col-sm-10">@Model.MedicoModel.NumeroRegistroProfissional</dd>
             </dl>
 
             <form method="post">
-                <input type="hidden" asp-for="Medico.IdMedico" />
+                <input type="hidden" asp-for="MedicoModel.IdMedico" />
                 <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
                 <a class="btn btn-secondary" href="/Medico/Index">Cancelar</a>
             </form>

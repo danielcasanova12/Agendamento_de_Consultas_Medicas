@@ -21,8 +21,17 @@ namespace agendamento_webapi.Controllers
         public async Task<IActionResult> Get()
         {
             var consultas = await _context.Consultas!.ToListAsync();
+
+            // Percorra todas as consultas e preencha os médicos e pacientes associados
+            foreach (var consulta in consultas)
+            {
+                consulta.Medico = await _context.Medicos.FindAsync(consulta.IdMedico);
+                consulta.Paciente = await _context.Pacientes.FindAsync(consulta.IdPaciente);
+            }
+
             return Ok(consultas);
         }
+
 
         // Ação GET para obter uma consulta por ID
         [HttpGet("{id}")]
@@ -38,13 +47,13 @@ namespace agendamento_webapi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CriarConsultaMedica(int idMedico, int idPaciente, [FromBody] ConsultaModel consultaMedica)
+        public async Task<IActionResult> CriarConsultaMedica([FromBody] ConsultaModel consultaMedica)
         {
             try
             {
                 // Verifique se os médicos e pacientes existem no banco de dados
-                var medico = await _context.Medicos.FindAsync(idMedico);
-                var paciente = await _context.Pacientes.FindAsync(idPaciente);
+                MedicoModel medico = await _context.Medicos.FindAsync(consultaMedica.IdMedico);
+                var paciente = await _context.Pacientes.FindAsync(consultaMedica.IdPaciente);
 
                 if (medico == null || paciente == null)
                 {
@@ -54,6 +63,7 @@ namespace agendamento_webapi.Controllers
                 // Associe o médico e o paciente à consulta médica
                 consultaMedica.Medico = medico;
                 consultaMedica.Paciente = paciente;
+                consultaMedica.Observações = "Observações";
 
                 // Adicione a consulta médica ao contexto e salve no banco de dados
                 _context.Consultas.Add(consultaMedica);

@@ -30,7 +30,7 @@ namespace Agenda_Web.Pages.Medico
 
         public async Task<IActionResult> OnPostAsync()
         {
-            var apiUrl = _apiUrls.Medico;
+            var apiUrl = "http://localhost:5219/api/Medico";
 
             try
             {
